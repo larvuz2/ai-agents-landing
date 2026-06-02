@@ -50,7 +50,7 @@
     .promo-banner{position:fixed;top:0;left:0;right:0;z-index:80;display:block;background:#070707;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);box-shadow:rgba(0,0,0,.16) 0 14px 28px -22px}
     .promo-inner{min-height:46px;display:flex;align-items:center;justify-content:center;gap:12px;text-align:center;font-size:15px;line-height:1.1}
     .promo-pill{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);border-radius:999px;padding:5px 9px;color:#fff;font-family:'Source Code Pro',monospace;font-size:12px;white-space:nowrap}.promo-pill i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(34,197,94,.16)}
-    .promo-copy{display:inline-flex;align-items:center;gap:8px;min-width:0}.promo-shiny{--shiny-width:120px;background:linear-gradient(90deg,rgba(255,255,255,.72),#fff,rgba(255,255,255,.72));background-size:var(--shiny-width) 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shiny-text 6s infinite;font-weight:500}.promo-count{font-family:'Source Code Pro',monospace;color:#ffb199}.promo-arrow{transition:transform .2s ease}.promo-banner:hover .promo-arrow{transform:translateX(3px)}
+    .promo-copy{display:inline-flex;align-items:center;gap:8px;min-width:0}.promo-shiny{--shiny-width:120px;position:relative;color:#fff;font-weight:500}.promo-shiny:after{content:attr(data-text);position:absolute;inset:0;color:transparent;background:linear-gradient(90deg,transparent,rgba(255,255,255,.96),transparent);background-size:var(--shiny-width) 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;animation:shiny-text 8s infinite;pointer-events:none}.promo-count{font-family:'Source Code Pro',monospace;color:#ffb199}.promo-arrow{transition:transform .2s ease}.promo-banner:hover .promo-arrow{transform:translateX(3px)}
     @keyframes shiny-text{0%,90%,100%{background-position:calc(-100% - var(--shiny-width)) 0}30%,60%{background-position:calc(100% + var(--shiny-width)) 0}}
     .nav{
       position:sticky;top:46px;z-index:50;
@@ -165,7 +165,7 @@
   <a class="promo-banner" id="launchPromo" href="#contacto" aria-label="Promoción de lanzamiento: primeros 100 agentes con 30% de descuento">
     <div class="wrap promo-inner">
       <span class="promo-pill"><i></i> Lanzamiento <b>30/100</b></span>
-      <span class="promo-copy"><span class="promo-shiny">Primeros 100 agentes con 30% de descuento</span><span class="promo-count">quedan pocos</span><span class="promo-arrow">→</span></span>
+      <span class="promo-copy"><span class="promo-shiny" data-text="Primeros 100 agentes con 30% de descuento">Primeros 100 agentes con 30% de descuento</span><span class="promo-count">quedan pocos</span><span class="promo-arrow">→</span></span>
     </div>
   </a>
   <nav class="nav">
