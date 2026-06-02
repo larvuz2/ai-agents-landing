@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Instalamos agentes de AI para empresas: propuestas, seguimiento, reportes, marketing, operación y Mission Control." />
+  <meta property="og:title" content="Agentes de AI para empresas" />
+  <meta property="og:description" content="Menos caos operativo. Más seguimiento. Mejores decisiones." />
+  <meta property="og:type" content="website" />
+  <title>Agentes de AI para Empresas | Larvuz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#061b31;
+      --muted:#64748d;
+      --label:#273951;
+      --line:#e5edf5;
+      --soft:#f6f9fc;
+      --soft2:#eef4fb;
+      --purple:#533afd;
+      --purple-dark:#4434d4;
+      --purple-soft:#d6d9fc;
+      --navy:#1c1e54;
+      --ruby:#ea2261;
+      --magenta:#f96bee;
+      --green:#15be53;
+      --shadow:rgba(50,50,93,.25) 0 30px 45px -30px, rgba(0,0,0,.10) 0 18px 36px -18px;
+      --shadow-soft:rgba(23,23,23,.08) 0 15px 35px 0;
+      --radius:8px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Source Sans 3',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      font-feature-settings:"ss01";
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      background:rgba(255,255,255,.82);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(229,237,245,.78);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+    .mark{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--purple),var(--ruby));box-shadow:rgba(83,58,253,.35) 0 12px 24px -12px}
+    .nav-links{display:flex;align-items:center;gap:22px;color:var(--label);font-size:15px}
+    .nav-links a{opacity:.84}.nav-links a:hover{opacity:1;color:var(--purple)}
+    .actions{display:flex;align-items:center;gap:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      min-height:44px;padding:11px 17px;border-radius:6px;border:1px solid transparent;
+      font-weight:400;line-height:1;cursor:pointer;transition:.18s ease;
+      white-space:nowrap;
+    }
+    .btn-primary{background:var(--purple);color:#fff;box-shadow:rgba(83,58,253,.28) 0 16px 30px -18px}
+    .btn-primary:hover{background:var(--purple-dark);transform:translateY(-1px)}
+    .btn-ghost{color:var(--purple);border-color:var(--purple-soft);background:rgba(83,58,253,.03)}
+    .btn-ghost:hover{background:rgba(83,58,253,.07);transform:translateY(-1px)}
+    .btn-dark{background:#fff;color:var(--navy)}
+    .mobile-menu{display:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 12px;color:var(--ink)}
+
+    .hero{position:relative;overflow:hidden;padding:82px 0 62px;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+    .hero:before{content:"";position:absolute;inset:-30% -20% auto auto;width:780px;height:520px;background:radial-gradient(circle at 30% 30%,rgba(249,107,238,.30),transparent 35%),radial-gradient(circle at 70% 20%,rgba(83,58,253,.25),transparent 32%);filter:blur(20px);opacity:.72;pointer-events:none}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px 6px 7px;color:var(--label);font-size:14px;box-shadow:rgba(23,23,23,.05) 0 6px 18px}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(21,190,83,.12)}
+    h1{font-size:clamp(42px,6.2vw,74px);line-height:.96;letter-spacing:-2.2px;font-weight:300;margin:22px 0 20px;color:var(--ink);text-wrap:balance}
+    .lead{font-size:clamp(19px,2vw,23px);line-height:1.35;color:var(--muted);font-weight:300;margin:0 0 28px;max-width:660px;text-wrap:pretty}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 22px}
+    .microproof{display:flex;gap:16px;flex-wrap:wrap;color:var(--label);font-size:14px;margin-top:18px}
+    .microproof span{display:flex;align-items:center;gap:7px}.check{color:var(--green);font-weight:600}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:16px;position:relative}
+    .browser-bar{height:34px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;margin:-16px -16px 16px;padding:0 14px;background:#fbfdff;border-radius:10px 10px 0 0}
+    .traffic{width:8px;height:8px;border-radius:50%;background:#d9e3ef}.traffic:nth-child(1){background:#ff6b6b}.traffic:nth-child(2){background:#ffd166}.traffic:nth-child(3){background:#15be53}
+    .audit-box{border:1px solid var(--line);border-radius:8px;padding:18px;background:linear-gradient(180deg,#fff,#f8fbff)}
+    .audit-box h3{margin:0 0 8px;font-weight:300;font-size:28px;letter-spacing:-.5px}
+    .audit-box p{margin:0 0 16px;color:var(--muted);font-size:16px;line-height:1.4}
+    .url-form{display:flex;gap:8px;align-items:stretch}
+    .url-form input,.lead-form input,.lead-form textarea,.lead-form select{
+      width:100%;border:1px solid var(--line);border-radius:6px;padding:13px 13px;color:var(--ink);background:#fff;outline:none;transition:.18s ease;
+    }
+    .url-form input:focus,.lead-form input:focus,.lead-form textarea:focus,.lead-form select:focus{border-color:var(--purple);box-shadow:0 0 0 4px rgba(83,58,253,.10)}
+    .audit-result{margin-top:14px;display:none;border:1px dashed #b9b9f9;border-radius:8px;padding:14px;background:#fff;color:var(--label)}
+    .audit-result strong{color:var(--ink)}
+    .screen-placeholder{height:250px;border:1px dashed #b9b9f9;border-radius:8px;margin-top:14px;background:linear-gradient(135deg,#f6f9fc,#fff);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:20px}
+    .screen-placeholder b{display:block;color:var(--label);font-weight:400;margin-bottom:4px}
+
+    section{padding:82px 0}.section-head{max-width:720px;margin-bottom:34px}
+    .kicker{color:var(--purple);font-size:14px;font-weight:500;letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px}
+    h2{font-size:clamp(34px,4.2vw,52px);line-height:1.02;letter-spacing:-1.3px;font-weight:300;margin:0 0 14px;text-wrap:balance}
+    .section-head p{font-size:19px;line-height:1.42;color:var(--muted);font-weight:300;margin:0;text-wrap:pretty}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px;box-shadow:rgba(23,23,23,.05) 0 10px 28px -18px;transition:.18s ease}
+    .card:hover{box-shadow:var(--shadow-soft);transform:translateY(-2px)}
+    .card h3{font-size:24px;font-weight:300;letter-spacing:-.35px;line-height:1.1;margin:0 0 9px}.card p{margin:0;color:var(--muted);line-height:1.45}.card ul{padding:0;margin:14px 0 0;list-style:none;color:var(--label)}.card li{display:flex;gap:8px;margin:8px 0}.card li:before{content:"✓";color:var(--green);font-weight:600}
+    .image-slot{min-height:180px;border:1px dashed #b9b9f9;border-radius:8px;background:linear-gradient(135deg,#fff,#f5f7ff);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:18px;margin-bottom:18px}.image-slot span{max-width:220px}
+
+    .dark{background:var(--navy);color:#fff;position:relative;overflow:hidden}.dark:before{content:"";position:absolute;right:-220px;top:-250px;width:680px;height:680px;background:radial-gradient(circle,rgba(249,107,238,.26),transparent 55%);pointer-events:none}.dark .wrap{position:relative}.dark h2,.dark h3{color:#fff}.dark p{color:rgba(255,255,255,.72)}.dark .kicker{color:#b9b9f9}.dark-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:8px;padding:24px;backdrop-filter:blur(10px)}
+    .mission-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:30px;align-items:center}.mission-panel{background:#fff;color:var(--ink);border-radius:10px;padding:16px;box-shadow:rgba(0,0,0,.22) 0 30px 70px -40px}.mission-row{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:7px;padding:12px;margin-bottom:10px}.mission-row small{color:var(--muted)}.badge{font-size:12px;border-radius:999px;padding:4px 8px;background:rgba(21,190,83,.14);color:#108c3d;border:1px solid rgba(21,190,83,.25)}
+
+    .process{counter-reset:step}.step{position:relative;padding-left:64px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:24px;width:38px;height:38px;border-radius:9px;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:'Source Code Pro',monospace;font-size:14px;box-shadow:var(--shadow)}
+    .packages .card{display:flex;flex-direction:column}.price{font-size:14px;color:var(--purple);font-family:'Source Code Pro',monospace;margin-bottom:12px}.packages .btn{margin-top:auto;width:fit-content}
+    .testimonials{background:#f8fbff}.quote{min-height:260px;display:flex;flex-direction:column;justify-content:space-between}.quote blockquote{margin:0;color:var(--ink);font-size:21px;line-height:1.25;font-weight:300;letter-spacing:-.2px}.person{display:flex;gap:12px;align-items:center;margin-top:22px}.avatar{width:44px;height:44px;border-radius:50%;border:1px dashed #b9b9f9;background:#fff}.person small{display:block;color:var(--muted)}
+    .lead-capture{background:linear-gradient(180deg,#fff,#f8fbff)}.capture-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.lead-form{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;box-shadow:var(--shadow)}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.lead-form label{display:block;font-size:13px;color:var(--label);margin:0 0 6px}.lead-form textarea{min-height:96px;resize:vertical}.form-note{font-size:13px;color:var(--muted);margin:12px 0 0}.form-status{display:none;margin-top:12px;border:1px solid rgba(21,190,83,.35);background:rgba(21,190,83,.08);color:#108c3d;border-radius:7px;padding:10px 12px}
+    .faq{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-size:21px;font-weight:300;color:var(--ink);list-style:none}summary::-webkit-details-marker{display:none}details p{color:var(--muted);max-width:780px;line-height:1.48}
+    .final{padding:76px 0;background:#061b31;color:#fff}.final h2{color:#fff;max-width:760px}.final p{color:rgba(255,255,255,.72);font-size:20px;line-height:1.4;max-width:680px}.footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+    @media (max-width: 900px){
+      .nav-links,.actions{display:none}.mobile-menu{display:block}.nav-inner{height:64px}.hero{padding-top:54px}.hero-grid,.mission-grid,.capture-grid{grid-template-columns:1fr}.grid-3,.grid-2{grid-template-columns:1fr}.hero-card{order:-1}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.4px}.wrap{width:min(var(--max),calc(100% - 28px))}
+    }
+    @media (max-width: 520px){.hero-ctas .btn{width:100%}.microproof{display:block}.microproof span{margin:8px 0}h2{letter-spacing:-.8px}.card,.dark-card,.lead-form{padding:20px}.footer .wrap{display:block}}
+    @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Inicio"><span class="mark"></span><span>Larvuz AI Ops</span></a>
+      <div class="nav-links">
+        <a href="#agentes">Agentes</a><a href="#mission-control">Mission Control</a><a href="#proceso">Proceso</a><a href="#casos">Casos</a><a href="#contacto">Contacto</a>
+      </div>
+      <div class="actions"><a class="btn btn-ghost" href="#test">Test de página</a><a class="btn btn-primary" href="#contacto">Agendar llamada</a></div>
+      <a class="mobile-menu" href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Instalación de agentes para empresas</div>
+          <h1>Agentes de AI que trabajan dentro de tu empresa.</h1>
+          <p class="lead">Automatizamos tareas repetitivas, ordenamos información y creamos flujos inteligentes para que tu equipo trabaje más rápido sin contratar más gente.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#contacto">Quiero recibir interesados</a>
+            <a class="btn btn-ghost" href="#test">Probar mi página</a>
+          </div>
+          <div class="microproof">
+            <span><b class="check">✓</b> Propuestas y seguimiento</span>
+            <span><b class="check">✓</b> Reportes para dirección</span>
+            <span><b class="check">✓</b> Instalación sin migrar todo</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" id="test" aria-label="Test de página web">
+          <div class="browser-bar"><span class="traffic"></span><span class="traffic"></span><span class="traffic"></span></div>
+          <div class="audit-box">
+            <h3>Ingresa tu página aquí</h3>
+            <p>Te mostramos dónde un agente puede ayudarte a capturar más leads, dar seguimiento y convertir mejor.</p>
+            <form class="url-form" id="urlForm">
+              <input id="websiteInput" type="url" placeholder="https://tuempresa.com" required>
+              <button class="btn btn-primary" type="submit">Hacer test</button>
+            </form>
+            <div class="audit-result" id="auditResult"></div>
+            <div class="screen-placeholder"><span><b>Espacio para imagen / demo</b>Agrega aquí screenshot de dashboard, video o mockup del agente revisando una web.</span></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="agentes">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Qué instalamos</div>
+          <h2>AI práctica para procesos reales.</h2>
+          <p>Creamos agentes personalizados para ventas, operaciones, marketing, atención a clientes, reportes, propuestas y administración interna.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><div class="image-slot"><span>Imagen futura: propuesta / cotización generada por AI</span></div><h3>Propuestas y cotizaciones</h3><p>Un agente que arma borradores, estructura alcances, detecta huecos y acelera el cierre comercial.</p><ul><li>Briefs ordenados</li><li>Versiones rápidas</li><li>Checklist antes de enviar</li></ul></article>
+          <article class="card"><div class="image-slot"><span>Imagen futura: pipeline / seguimiento de clientes</span></div><h3>Seguimiento comercial</h3><p>Menos oportunidades olvidadas. El agente resume contexto, sugiere el siguiente paso y prepara mensajes.</p><ul><li>Recordatorios claros</li><li>Historial de cuentas</li><li>Mensajes listos para aprobar</li></ul></article>
+          <article class="card"><div class="image-slot"><span>Imagen futura: reporte ejecutivo semanal</span></div><h3>Reportes para dirección</h3><p>Resumen ejecutivo de pendientes, bloqueos, clientes, campañas y prioridades sin perseguir al equipo.</p><ul><li>Briefing diario o semanal</li><li>Alertas importantes</li><li>Visibilidad operativa</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="mission-control">
+      <div class="wrap mission-grid">
+        <div>
+          <div class="kicker">AI Mission Control</div>
+          <h2>Una cabina de control para tu operación.</h2>
+          <p>Para empresas que necesitan más visibilidad, creamos un Mission Control: un panel central donde puedes ver tareas, clientes, pendientes, reportes, agentes activos y prioridades del negocio.</p>
+          <div class="hero-ctas"><a class="btn btn-dark" href="#contacto">Quiero mi Mission Control</a><a class="btn btn-ghost" href="#proceso" style="color:#fff;border-color:rgba(255,255,255,.26);background:rgba(255,255,255,.06)">Ver proceso</a></div>
+        </div>
+        <div class="mission-panel">
+          <div class="mission-row"><div><strong>Agente de propuestas</strong><br><small>3 borradores pendientes de aprobación</small></div><span class="badge">Activo</span></div>
+          <div class="mission-row"><div><strong>Seguimiento clientes</strong><br><small>5 cuentas necesitan respuesta esta semana</small></div><span class="badge">Prioridad</span></div>
+          <div class="mission-row"><div><strong>Reporte dirección</strong><br><small>Resumen semanal listo para revisar</small></div><span class="badge">Listo</span></div>
+          <div class="screen-placeholder" style="height:190px;margin-top:14px"><span><b>Espacio para screenshot del dashboard</b>Coloca aquí imagen real del Mission Control cuando esté listo.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Proceso</div>
+          <h2>Empezamos pequeño. Después escalamos.</h2>
+          <p>No necesitas cambiar toda tu empresa. Detectamos un proceso con fricción, instalamos un agente útil y medimos si realmente ahorra tiempo o genera más seguimiento.</p>
+        </div>
+        <div class="grid-3 process">
+          <article class="card step"><h3>Diagnóstico rápido</h3><p>Revisamos procesos, herramientas, documentos y puntos donde se pierde tiempo.</p></article>
+          <article class="card step"><h3>Diseño de agentes</h3><p>Definimos qué agente se necesita, qué puede hacer, qué necesita aprobación humana y cómo se mide.</p></article>
+          <article class="card step"><h3>Instalación y prueba</h3><p>Conectamos información, probamos con el equipo, ajustamos tono, reglas, permisos y resultados.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Opciones</div>
+          <h2>Elige el nivel correcto para empezar.</h2>
+          <p>Paquetes pensados para vender, probar y convertir sin meter complejidad innecesaria desde el día uno.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><div class="price">STARTER</div><h3>Instalación inicial</h3><p>Para validar 1–2 agentes en un proceso claro.</p><ul><li>Diagnóstico de procesos</li><li>Diseño del agente</li><li>Entrenamiento con documentos</li><li>Pruebas iniciales</li></ul><a class="btn btn-ghost" href="#contacto">Pedir diagnóstico</a></article>
+          <article class="card" style="border-color:#b9b9f9;box-shadow:var(--shadow)"><div class="price">MEJOR WEDGE</div><h3>AI Ops Partner</h3><p>Para empresas que quieren AI funcionando cada mes en su operación.</p><ul><li>3–5 agentes personalizados</li><li>Optimización mensual</li><li>Nuevos flujos según necesidad</li><li>Reportes de uso y mejora</li></ul><a class="btn btn-primary" href="#contacto">Agendar llamada</a></article>
+          <article class="card"><div class="price">CONTROL</div><h3>Mission Control</h3><p>Para dueños y directores que necesitan visibilidad sin microgestionar.</p><ul><li>Dashboard central</li><li>Agentes especializados</li><li>Base de conocimiento interna</li><li>Cola de pendientes</li></ul><a class="btn btn-ghost" href="#contacto">Quiero verlo</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="casos">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Casos de éxito</div>
+          <h2>Deja aquí la prueba que cierra ventas.</h2>
+          <p>Recuadros listos para agregar testimonios, screenshots, métricas o antes/después cuando tengas material real.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card quote"><div><div class="image-slot"><span>Logo / screenshot del cliente</span></div><blockquote>“Agrega aquí un testimonio corto sobre tiempo ahorrado, seguimiento o más cierres.”</blockquote></div><div class="person"><div class="avatar"></div><div><strong>Nombre del cliente</strong><small>Empresa / cargo</small></div></div></article>
+          <article class="card quote"><div><div class="image-slot"><span>Antes / después del proceso</span></div><blockquote>“El agente nos ayudó a pasar de caos operativo a un sistema claro.”</blockquote></div><div class="person"><div class="avatar"></div><div><strong>Nombre del cliente</strong><small>Empresa / cargo</small></div></div></article>
+          <article class="card quote"><div><div class="image-slot"><span>Métrica / resultado visual</span></div><blockquote>“Menos tareas manuales, mejor visibilidad y más velocidad para responder.”</blockquote></div><div class="person"><div class="avatar"></div><div><strong>Nombre del cliente</strong><small>Empresa / cargo</small></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-capture" id="contacto">
+      <div class="wrap capture-grid">
+        <div>
+          <div class="kicker">Recibe citas e interesados</div>
+          <h2>Cuéntanos dónde se está atorando tu operación.</h2>
+          <p class="lead" style="font-size:20px">Te respondemos con una recomendación concreta: qué agente instalar primero, qué información necesita y cuál sería el primer resultado medible.</p>
+          <div class="card"><h3>Promesa de la llamada</h3><p>En 30 minutos salimos con un mapa claro: proceso prioritario, agente inicial, riesgo de implementación y siguiente paso. Sin presentación eterna.</p></div>
+        </div>
+        <form class="lead-form" id="leadForm">
+          <div class="field-row">
+            <div><label>Nombre</label><input name="nombre" placeholder="Tu nombre" required></div>
+            <div><label>Email</label><input name="email" type="email" placeholder="tu@empresa.com" required></div>
+          </div>
+          <div class="field-row">
+            <div><label>Empresa</label><input name="empresa" placeholder="Nombre de empresa"></div>
+            <div><label>Página web</label><input name="web" type="url" placeholder="https://"></div>
+          </div>
+          <div><label>Qué quieres resolver primero</label><select name="interes"><option>Propuestas y cotizaciones</option><option>Seguimiento comercial</option><option>Reportes para dirección</option><option>Marketing / contenido</option><option>Mission Control</option><option>No estoy seguro</option></select></div>
+          <div><label>Contexto rápido</label><textarea name="mensaje" placeholder="Ej. Perdemos leads porque nadie da seguimiento después de la primera llamada..."></textarea></div>
+          <button class="btn btn-primary" type="submit" style="width:100%;margin-top:12px">Enviar interés</button>
+          <p class="form-note">Versión temporal: el botón abre un correo prellenado. Cambia el email de destino en <code>CONFIG.contactEmail</code> cuando conectes CRM/Formspree/HubSpot.</p>
+          <div class="form-status" id="formStatus">Listo. Se abrió un correo prellenado para enviar el lead.</div>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Preguntas</div><h2>Lo importante antes de empezar.</h2></div>
+        <details open><summary>¿Esto reemplaza a mi equipo?</summary><p>No. El objetivo es quitar trabajo repetitivo, ordenar información y ayudar a que el equipo responda más rápido. Las decisiones importantes pueden quedar con aprobación humana.</p></details>
+        <details><summary>¿Tengo que cambiar mis herramientas?</summary><p>No al inicio. Podemos trabajar sobre documentos, Drive, Notion, Sheets, CRM, emails o bases internas. Primero resolvemos un flujo; luego vemos si conviene conectar más.</p></details>
+        <details><summary>¿Qué proceso conviene automatizar primero?</summary><p>Normalmente el mejor primer paso es algo cercano a ingresos: propuestas, cotizaciones, seguimiento comercial o reportes de clientes. Si mueve ventas o retención, se paga más rápido.</p></details>
+        <details><summary>¿Qué necesita mi empresa para empezar?</summary><p>Un proceso claro, algunos documentos reales, ejemplos de trabajo anterior y una persona que pueda aprobar la forma correcta de operar.</p></details>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <h2>Si tu equipo sigue haciendo manualmente lo que un agente puede resolver, estás perdiendo tiempo todos los días.</h2>
+        <p>Empieza con un proceso. Un agente. Un resultado claro. Después escalamos a una operación asistida por AI.</p>
+        <div class="hero-ctas"><a class="btn btn-dark" href="#contacto">Quiero una llamada</a><a class="btn btn-ghost" href="#test" style="color:#fff;border-color:rgba(255,255,255,.26);background:rgba(255,255,255,.06)">Probar mi página</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Larvuz AI Ops</span><span>AI práctica para procesos reales.</span></div></footer>
+
+  <script>
+    const CONFIG = {
+      contactEmail: 'gus@metazooie.com',
+      subjectPrefix: 'Interesado en agentes de AI'
+    };
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('urlForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const url = document.getElementById('websiteInput').value.trim();
+      const result = document.getElementById('auditResult');
+      let host = url;
+      try { host = new URL(url).hostname.replace('www.',''); } catch(err) {}
+      result.style.display = 'block';
+      result.innerHTML = `<strong>Mini diagnóstico para ${host}</strong><br><br>
+      Lo primero que revisaríamos:<br>
+      1. ¿La página captura leads con claridad?<br>
+      2. ¿Hay seguimiento automático después del primer contacto?<br>
+      3. ¿El equipo tiene contexto centralizado del cliente?<br>
+      4. ¿Existe un flujo para propuestas y cotizaciones?<br><br>
+      <a class="btn btn-primary" href="mailto:${CONFIG.contactEmail}?subject=${encodeURIComponent(CONFIG.subjectPrefix + ' — Test de página')}&body=${encodeURIComponent('Quiero revisar esta página: ' + url + '\n\nMe interesa detectar oportunidades para agentes de AI, seguimiento y conversión.')}" style="margin-top:4px">Recibir recomendación</a>`;
+    });
+
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(e.currentTarget);
+      const lines = [...data.entries()].map(([k,v]) => `${k}: ${v}`).join('\n');
+      const subject = `${CONFIG.subjectPrefix} — ${data.get('empresa') || data.get('nombre')}`;
+      window.location.href = `mailto:${CONFIG.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+      document.getElementById('formStatus').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
