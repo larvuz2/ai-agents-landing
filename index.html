@@ -129,9 +129,12 @@
     .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px;box-shadow:rgba(23,23,23,.05) 0 10px 28px -18px;transition:.18s ease}
     .card:hover{box-shadow:var(--shadow-soft);transform:translateY(-2px)}
     .card h3{font-size:24px;font-weight:300;letter-spacing:-.35px;line-height:1.1;margin:0 0 9px}.card p{margin:0;color:var(--muted);line-height:1.45}.card ul{padding:0;margin:14px 0 0;list-style:none;color:var(--label)}.card li{display:flex;gap:8px;margin:8px 0}.card li:before{content:"✓";color:var(--green);font-weight:600}
-    .image-slot{min-height:180px;border:1px dashed #dedede;border-radius:8px;background:linear-gradient(135deg,#fff,#f7f7f7);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:18px;margin-bottom:18px}.image-slot span{max-width:220px}
+    .image-slot{min-height:180px;border:1px solid var(--line);border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:18px;margin-bottom:18px;box-shadow:rgba(0,0,0,.05) 0 0 0 1px, rgba(0,0,0,.03) 0 10px 24px -18px}.image-slot span{max-width:220px}
+    .service-graphic{width:100%;min-height:144px;display:grid;place-items:center}.service-graphic svg{width:100%;max-width:230px;height:auto}.icon-tile{width:42px;height:42px;border-radius:11px;background:#090909;color:#fff;display:grid;place-items:center;margin-bottom:16px;box-shadow:inset 0 -3px 0 var(--magenta),inset 0 -6px 0 var(--ruby)}.icon-tile svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+    .platform-highlights{background:#fff;border-bottom:1px solid var(--line)}.highlight-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center}.highlight-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.highlight-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:rgba(0,0,0,.05) 0 0 0 1px, rgba(0,0,0,.04) 0 16px 28px -22px}.highlight-card h3{font-size:21px;font-weight:400;letter-spacing:-.35px;line-height:1.1;margin:0 0 8px}.highlight-card p{font-size:15px;line-height:1.42;color:var(--muted);margin:0}.dashboard-mini{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}.dash-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:12px}.dash-title{font-family:'Source Code Pro',monospace;font-size:12px;color:var(--muted)}.dash-status{font-size:12px;border-radius:999px;padding:4px 8px;background:rgba(34,197,94,.12);color:#15803d}.dash-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:10px;background:linear-gradient(180deg,#fff,#fafafa)}.dash-row strong{font-weight:400}.dash-row small{display:block;color:var(--muted);margin-top:2px}.dash-num{font-family:'Source Code Pro',monospace;color:var(--ink)}
+    .workflow-section{background:linear-gradient(180deg,#fff,#f7f7f7);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.workflow-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.workflow-steps{display:grid;gap:12px}.workflow-step{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:rgba(0,0,0,.04) 0 10px 26px -20px}.step-num{font-family:'Source Code Pro',monospace;font-size:12px;color:#fff;background:#090909;border-radius:999px;padding:6px 8px}.workflow-step h3{font-size:20px;font-weight:400;margin:0 0 5px;letter-spacing:-.25px}.workflow-step p{margin:0;color:var(--muted);line-height:1.42}.tool-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.tool-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;color:var(--label);font-size:14px;box-shadow:rgba(0,0,0,.03) 0 8px 18px -14px}.tool-pill i{width:8px;height:8px;border-radius:50%;background:#090909}
 
-    .dark{background:var(--navy);color:#fff;position:relative;overflow:hidden}.dark:before{content:"";position:absolute;right:-220px;top:-250px;width:680px;height:680px;background:radial-gradient(circle,rgba(249,107,238,.26),transparent 55%);pointer-events:none}.dark .wrap{position:relative}.dark h2,.dark h3{color:#fff}.dark p{color:rgba(255,255,255,.72)}.dark .kicker{color:#dedede}.dark-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:8px;padding:24px;backdrop-filter:blur(10px)}
+    .dark{background:var(--navy);color:#fff;position:relative;overflow:hidden}.dark:before{content:"";position:absolute;right:-220px;top:-250px;width:680px;height:680px;background:radial-gradient(circle,rgba(255,106,61,.18),transparent 55%);pointer-events:none}.dark .wrap{position:relative}.dark h2,.dark h3{color:#fff}.dark p{color:rgba(255,255,255,.72)}.dark .kicker{color:#dedede}.dark-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:8px;padding:24px;backdrop-filter:blur(10px)}
     .mission-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:30px;align-items:center}.mission-panel{background:#fff;color:var(--ink);border-radius:10px;padding:16px;box-shadow:rgba(0,0,0,.22) 0 30px 70px -40px}.mission-row{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:7px;padding:12px;margin-bottom:10px}.mission-row small{color:var(--muted)}.badge{font-size:12px;border-radius:999px;padding:4px 8px;background:rgba(21,190,83,.14);color:#108c3d;border:1px solid rgba(21,190,83,.25)}
 
     .process{counter-reset:step}.step{position:relative;padding-left:64px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:24px;width:38px;height:38px;border-radius:9px;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:'Source Code Pro',monospace;font-size:14px;box-shadow:var(--shadow)}
@@ -144,7 +147,7 @@
     .final{padding:76px 0;background:#070707;color:#fff}.final h2{color:#fff;max-width:760px}.final p{color:rgba(255,255,255,.72);font-size:20px;line-height:1.4;max-width:680px}.footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     @media (max-width: 900px){
-      .nav-links,.actions{display:none}.mobile-menu{display:block}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.capture-grid,.audit-grid{grid-template-columns:1fr}.grid-3,.grid-2,.validation-grid{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
+      .nav-links,.actions{display:none}.mobile-menu{display:block}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid{grid-template-columns:1fr}.grid-3,.grid-2,.validation-grid,.highlight-cards{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
     }
     @media (max-width: 520px){.hero-ctas .btn{width:100%}.microproof{display:block}.microproof span{margin:8px 0}h2{letter-spacing:-.8px}.card,.dark-card,.lead-form{padding:20px}.footer .wrap{display:block}}
     @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important}}
@@ -155,7 +158,7 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="Inicio"><span class="mark"></span><span>Larvuz AI Ops</span></a>
       <div class="nav-links">
-        <a href="#agentes">Agentes</a><a href="#mission-control">Mission Control</a><a href="#proceso">Proceso</a><a href="#casos">Casos</a><a href="#contacto">Contacto</a>
+        <a href="#plataforma">Plataforma</a><a href="#agentes">Agentes</a><a href="#mission-control">Mission Control</a><a href="#flujo">Flujo</a><a href="#casos">Casos</a><a href="#contacto">Contacto</a>
       </div>
       <div class="actions"><a class="btn btn-ghost" href="#test">Test de página</a><a class="btn btn-primary" href="#contacto">Agendar llamada</a></div>
       <a class="mobile-menu" href="#contacto">Contacto</a>
@@ -219,6 +222,28 @@
       </div>
     </section>
 
+    <section class="platform-highlights" id="plataforma">
+      <div class="wrap highlight-grid">
+        <div>
+          <div class="kicker">Plataforma completa</div>
+          <h2>Agentes que no solo contestan. Ejecutan, reportan y escalan.</h2>
+          <p class="lead" style="font-size:20px">Inspirado en los mejores productos de AI support: una capa simple para entrenar agentes, conectarlos a tus herramientas y medir qué está pasando en la operación.</p>
+          <div class="highlight-cards">
+            <article class="highlight-card"><div class="icon-tile"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8h14M7 16h10"/></svg></div><h3>Entrenados con tu contexto</h3><p>Documentos, ejemplos, tono comercial y reglas internas.</p></article>
+            <article class="highlight-card"><div class="icon-tile"><svg viewBox="0 0 24 24"><path d="M7 7h10v10H7zM3 12h4M17 12h4M12 3v4M12 17v4"/></svg></div><h3>Conectados al trabajo real</h3><p>Email, Sheets, CRM, calendarios, Drive, Notion o WhatsApp.</p></article>
+            <article class="highlight-card"><div class="icon-tile"><svg viewBox="0 0 24 24"><path d="M4 18V6M4 18h16M8 15v-4M12 15V8M16 15v-2"/></svg></div><h3>Medidos por resultado</h3><p>Citas, seguimientos, propuestas, pendientes y velocidad.</p></article>
+          </div>
+        </div>
+        <aside class="dashboard-mini" aria-label="Vista de Mission Control">
+          <div class="dash-head"><span class="dash-title">MISSION CONTROL / LIVE</span><span class="dash-status">Operando</span></div>
+          <div class="dash-row"><div><strong>Agente comercial</strong><small>Leads calientes listos para seguimiento</small></div><span class="dash-num">12</span></div>
+          <div class="dash-row"><div><strong>Llamadas atendidas</strong><small>Resumen y siguiente acción generados</small></div><span class="dash-num">318</span></div>
+          <div class="dash-row"><div><strong>Propuestas listas</strong><small>Borradores esperando aprobación humana</small></div><span class="dash-num">7</span></div>
+          <div class="dash-row"><div><strong>Reuniones agendadas</strong><small>Pipeline de ventas actualizado</small></div><span class="dash-num">56</span></div>
+        </aside>
+      </div>
+    </section>
+
     <section class="audit-section" id="test">
       <div class="wrap audit-grid">
         <div>
@@ -240,7 +265,7 @@
               <button class="btn btn-primary" type="submit">Hacer test</button>
             </form>
             <div class="audit-result" id="auditResult"></div>
-            <div class="screen-placeholder"><span><b>Espacio para imagen / demo</b>Agrega aquí screenshot de dashboard, video o mockup del agente revisando una web.</span></div>
+            <div class="screen-placeholder"><div class="service-graphic"><svg viewBox="0 0 300 160" aria-hidden="true"><rect x="24" y="24" width="252" height="112" rx="18" fill="#fff" stroke="#e7e7e7"/><rect x="48" y="48" width="94" height="9" rx="4.5" fill="#090909"/><rect x="48" y="70" width="170" height="7" rx="3.5" fill="#dedede"/><rect x="48" y="88" width="132" height="7" rx="3.5" fill="#ededed"/><circle cx="226" cy="77" r="18" fill="#f7f7f7" stroke="#dedede"/><path d="M217 77l7 7 14-18" stroke="#22c55e" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="48" y="112" width="84" height="14" rx="7" fill="#090909"/></svg></div></div>
           </div>
         </aside>
       </div>
@@ -254,9 +279,9 @@
           <p>Creamos agentes personalizados para ventas, operaciones, marketing, atención a clientes, reportes, propuestas y administración interna.</p>
         </div>
         <div class="grid-3">
-          <article class="card"><div class="image-slot"><span>Imagen futura: propuesta / cotización generada por AI</span></div><h3>Propuestas y cotizaciones</h3><p>Un agente que arma borradores, estructura alcances, detecta huecos y acelera el cierre comercial.</p><ul><li>Briefs ordenados</li><li>Versiones rápidas</li><li>Checklist antes de enviar</li></ul></article>
-          <article class="card"><div class="image-slot"><span>Imagen futura: pipeline / seguimiento de clientes</span></div><h3>Seguimiento comercial</h3><p>Menos oportunidades olvidadas. El agente resume contexto, sugiere el siguiente paso y prepara mensajes.</p><ul><li>Recordatorios claros</li><li>Historial de cuentas</li><li>Mensajes listos para aprobar</li></ul></article>
-          <article class="card"><div class="image-slot"><span>Imagen futura: reporte ejecutivo semanal</span></div><h3>Reportes para dirección</h3><p>Resumen ejecutivo de pendientes, bloqueos, clientes, campañas y prioridades sin perseguir al equipo.</p><ul><li>Briefing diario o semanal</li><li>Alertas importantes</li><li>Visibilidad operativa</li></ul></article>
+          <article class="card"><div class="image-slot"><div class="service-graphic"><svg viewBox="0 0 260 150" aria-hidden="true"><rect x="18" y="18" width="224" height="114" rx="16" fill="#fff" stroke="#e7e7e7"/><rect x="38" y="40" width="92" height="10" rx="5" fill="#090909"/><rect x="38" y="60" width="154" height="8" rx="4" fill="#d9d9d9"/><rect x="38" y="76" width="132" height="8" rx="4" fill="#ededed"/><rect x="38" y="101" width="74" height="18" rx="9" fill="#090909"/><path d="M182 103l11 11 24-30" stroke="#22c55e" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div><h3>Propuestas y cotizaciones</h3><p>Un agente que arma borradores, estructura alcances, detecta huecos y acelera el cierre comercial.</p><ul><li>Briefs ordenados</li><li>Versiones rápidas</li><li>Checklist antes de enviar</li></ul></article>
+          <article class="card"><div class="image-slot"><div class="service-graphic"><svg viewBox="0 0 260 150" aria-hidden="true"><rect x="20" y="22" width="220" height="106" rx="16" fill="#fff" stroke="#e7e7e7"/><circle cx="54" cy="58" r="16" fill="#090909"/><rect x="82" y="47" width="84" height="8" rx="4" fill="#090909"/><rect x="82" y="63" width="118" height="7" rx="3.5" fill="#d9d9d9"/><path d="M64 100h54M118 100c0-13 11-24 24-24h36" stroke="#090909" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="190" cy="76" r="10" fill="#22c55e"/><circle cx="118" cy="100" r="7" fill="#ff6a3d"/></svg></div></div><h3>Seguimiento comercial</h3><p>Menos oportunidades olvidadas. El agente resume contexto, sugiere el siguiente paso y prepara mensajes.</p><ul><li>Recordatorios claros</li><li>Historial de cuentas</li><li>Mensajes listos para aprobar</li></ul></article>
+          <article class="card"><div class="image-slot"><div class="service-graphic"><svg viewBox="0 0 260 150" aria-hidden="true"><rect x="22" y="20" width="216" height="110" rx="16" fill="#fff" stroke="#e7e7e7"/><rect x="42" y="42" width="62" height="10" rx="5" fill="#090909"/><rect x="42" y="62" width="176" height="8" rx="4" fill="#dedede"/><rect x="42" y="80" width="118" height="8" rx="4" fill="#ededed"/><rect x="42" y="103" width="24" height="12" rx="4" fill="#090909"/><rect x="78" y="95" width="24" height="20" rx="4" fill="#ff6a3d"/><rect x="114" y="86" width="24" height="29" rx="4" fill="#e93cff"/><rect x="150" y="74" width="24" height="41" rx="4" fill="#090909"/></svg></div></div><h3>Reportes para dirección</h3><p>Resumen ejecutivo de pendientes, bloqueos, clientes, campañas y prioridades sin perseguir al equipo.</p><ul><li>Briefing diario o semanal</li><li>Alertas importantes</li><li>Visibilidad operativa</li></ul></article>
         </div>
       </div>
     </section>
@@ -273,7 +298,26 @@
           <div class="mission-row"><div><strong>Agente de propuestas</strong><br><small>3 borradores pendientes de aprobación</small></div><span class="badge">Activo</span></div>
           <div class="mission-row"><div><strong>Seguimiento clientes</strong><br><small>5 cuentas necesitan respuesta esta semana</small></div><span class="badge">Prioridad</span></div>
           <div class="mission-row"><div><strong>Reporte dirección</strong><br><small>Resumen semanal listo para revisar</small></div><span class="badge">Listo</span></div>
-          <div class="screen-placeholder" style="height:190px;margin-top:14px"><span><b>Espacio para screenshot del dashboard</b>Coloca aquí imagen real del Mission Control cuando esté listo.</span></div>
+          <div class="screen-placeholder" style="height:190px;margin-top:14px"><div class="service-graphic"><svg viewBox="0 0 300 150" aria-hidden="true"><rect x="22" y="20" width="256" height="110" rx="18" fill="#fff" stroke="#e7e7e7"/><path d="M48 105C72 82 88 94 110 76s39-8 58-24 34-5 58-16" stroke="#090909" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="110" cy="76" r="6" fill="#ff6a3d"/><circle cx="168" cy="52" r="6" fill="#e93cff"/><circle cx="226" cy="36" r="6" fill="#22c55e"/><rect x="48" y="38" width="62" height="8" rx="4" fill="#090909"/><rect x="48" y="55" width="86" height="7" rx="3.5" fill="#dedede"/></svg></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-section" id="flujo">
+      <div class="wrap workflow-grid">
+        <div>
+          <div class="kicker">Cómo funciona</div>
+          <h2>De página web a cita agendada sin perder el control humano.</h2>
+          <p class="lead" style="font-size:20px">El sistema se instala como una capa operativa: captura señales, prepara acciones y deja que tu equipo apruebe lo importante.</p>
+          <div class="tool-cloud" aria-label="Herramientas conectables">
+            <span class="tool-pill"><i></i>Gmail</span><span class="tool-pill"><i></i>WhatsApp</span><span class="tool-pill"><i></i>Google Sheets</span><span class="tool-pill"><i></i>Drive</span><span class="tool-pill"><i></i>Notion</span><span class="tool-pill"><i></i>CRM</span><span class="tool-pill"><i></i>Calendly</span>
+          </div>
+        </div>
+        <div class="workflow-steps">
+          <article class="workflow-step"><span class="step-num">01</span><div><h3>Captura y entiende el contexto</h3><p>Lee la página, brief, correo o formulario y detecta intención, urgencia y datos faltantes.</p></div></article>
+          <article class="workflow-step"><span class="step-num">02</span><div><h3>Prepara la siguiente acción</h3><p>Genera borradores de respuesta, propuesta, resumen de llamada o tarea comercial.</p></div></article>
+          <article class="workflow-step"><span class="step-num">03</span><div><h3>Escala cuando toca</h3><p>Lo delicado queda para aprobación humana; lo repetitivo se mueve automático.</p></div></article>
+          <article class="workflow-step"><span class="step-num">04</span><div><h3>Reporta resultados</h3><p>Actualiza métricas, pendientes, reuniones, emails enviados y oportunidades abiertas.</p></div></article>
         </div>
       </div>
     </section>
