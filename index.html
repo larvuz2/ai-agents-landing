@@ -46,8 +46,14 @@
     a{color:inherit;text-decoration:none}
     button,input,textarea,select{font:inherit}
     .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    body{padding-top:46px}
+    .promo-banner{position:fixed;top:0;left:0;right:0;z-index:80;display:block;background:#070707;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);box-shadow:rgba(0,0,0,.16) 0 14px 28px -22px}
+    .promo-inner{min-height:46px;display:flex;align-items:center;justify-content:center;gap:12px;text-align:center;font-size:15px;line-height:1.1}
+    .promo-pill{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);border-radius:999px;padding:5px 9px;color:#fff;font-family:'Source Code Pro',monospace;font-size:12px;white-space:nowrap}.promo-pill i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(34,197,94,.16)}
+    .promo-copy{display:inline-flex;align-items:center;gap:8px;min-width:0}.promo-shiny{--shiny-width:120px;background:linear-gradient(90deg,rgba(255,255,255,.72),#fff,rgba(255,255,255,.72));background-size:var(--shiny-width) 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shiny-text 6s infinite;font-weight:500}.promo-count{font-family:'Source Code Pro',monospace;color:#ffb199}.promo-arrow{transition:transform .2s ease}.promo-banner:hover .promo-arrow{transform:translateX(3px)}
+    @keyframes shiny-text{0%,90%,100%{background-position:calc(-100% - var(--shiny-width)) 0}30%,60%{background-position:calc(100% + var(--shiny-width)) 0}}
     .nav{
-      position:sticky;top:0;z-index:50;
+      position:sticky;top:46px;z-index:50;
       background:rgba(255,255,255,.88);
       backdrop-filter:blur(18px);
       border-bottom:1px solid rgba(231,231,231,.86);
@@ -144,18 +150,24 @@
     .audit-section{background:linear-gradient(180deg,#fff,#f7f7f7);padding-top:70px}.audit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}.audit-proof{display:grid;gap:12px;margin-top:22px}.proof-chip{border:1px solid var(--line);background:#fff;border-radius:9px;padding:13px;color:var(--label);box-shadow:rgba(23,23,23,.04) 0 8px 20px -14px}.proof-chip strong{display:block;color:var(--ink);font-weight:400}
     .testimonials{background:#f7f7f7}.quote{min-height:260px;display:flex;flex-direction:column;justify-content:space-between}.quote blockquote{margin:0;color:var(--ink);font-size:21px;line-height:1.25;font-weight:300;letter-spacing:-.2px}.person{display:flex;gap:12px;align-items:center;margin-top:22px}.avatar{width:44px;height:44px;border-radius:50%;border:1px dashed #dedede;background:#fff}.person small{display:block;color:var(--muted)}
     .industry-cases{background:#fff}.industry-card{position:relative;overflow:hidden}.industry-card:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--purple),var(--ruby));opacity:.72}.industry-tag{display:inline-flex;margin-bottom:14px;padding:5px 8px;border-radius:999px;background:#f7f7f7;border:1px solid var(--line);color:var(--purple);font-family:'Source Code Pro',monospace;font-size:11px}.industry-card h3{font-size:23px}.industry-card p strong{color:var(--ink);font-weight:400}.industry-outcome{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:var(--label);font-size:15px}.industry-outcome b{color:var(--green);font-weight:600}
-    .lead-capture{background:linear-gradient(180deg,#fff,#f7f7f7)}.capture-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.lead-form{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;box-shadow:var(--shadow)}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.lead-form label{display:block;font-size:13px;color:var(--label);margin:0 0 6px}.lead-form textarea{min-height:96px;resize:vertical}.form-note{font-size:13px;color:var(--muted);margin:12px 0 0}.form-status{display:none;margin-top:12px;border:1px solid rgba(21,190,83,.35);background:rgba(21,190,83,.08);color:#108c3d;border-radius:7px;padding:10px 12px}
+    .lead-capture{background:linear-gradient(180deg,#fff,#f7f7f7)}.capture-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.lead-form{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;box-shadow:var(--shadow)}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.lead-form label{display:block;font-size:13px;color:var(--label);margin:0 0 6px}.lead-form textarea{min-height:96px;resize:vertical}.promo-code-field{display:none}.promo-code-field.is-active{display:block}.promo-code-field input{background:#f7f7f7;color:var(--ink);font-family:'Source Code Pro',monospace}.form-note{font-size:13px;color:var(--muted);margin:12px 0 0}.form-status{display:none;margin-top:12px;border:1px solid rgba(21,190,83,.35);background:rgba(21,190,83,.08);color:#108c3d;border-radius:7px;padding:10px 12px}
     .faq{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-size:21px;font-weight:300;color:var(--ink);list-style:none}summary::-webkit-details-marker{display:none}details p{color:var(--muted);max-width:780px;line-height:1.48}
     .final{padding:76px 0;background:#070707;color:#fff}.final h2{color:#fff;max-width:760px}.final p{color:rgba(255,255,255,.72);font-size:20px;line-height:1.4;max-width:680px}.footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     @media (max-width: 900px){
-      .nav-links,.actions{display:none}.mobile-menu{display:block}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid,.inevitable-grid{grid-template-columns:1fr}.grid-3,.grid-2,.validation-grid,.highlight-cards{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
+      body{padding-top:58px}.promo-inner{min-height:58px;gap:7px;flex-wrap:wrap;padding:7px 0;font-size:13px}.promo-pill{font-size:11px;padding:4px 8px}.nav-links,.actions{display:none}.mobile-menu{display:block}.nav{top:58px}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid,.inevitable-grid{grid-template-columns:1fr}.grid-3,.grid-2,.validation-grid,.highlight-cards{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
     }
     @media (max-width: 520px){.hero-ctas .btn{width:100%}.microproof{display:block}.microproof span{margin:8px 0}h2{letter-spacing:-.8px}.card,.dark-card,.lead-form{padding:20px}.footer .wrap{display:block}}
     @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important}}
   </style>
 </head>
 <body>
+  <a class="promo-banner" id="launchPromo" href="#contacto" aria-label="Promoción de lanzamiento: primeros 100 agentes con 30% de descuento">
+    <div class="wrap promo-inner">
+      <span class="promo-pill"><i></i> Lanzamiento <b>30/100</b></span>
+      <span class="promo-copy"><span class="promo-shiny">Primeros 100 agentes con 30% de descuento</span><span class="promo-count">quedan pocos</span><span class="promo-arrow">→</span></span>
+    </div>
+  </a>
   <nav class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="Inicio"><span class="mark"></span><span>Larvuz AI Ops</span></a>
@@ -456,6 +468,7 @@
             <div><label>Página web</label><input name="web" type="url" placeholder="https://"></div>
           </div>
           <div><label>Qué quieres resolver primero</label><select name="interes"><option>Propuestas y cotizaciones</option><option>Seguimiento comercial</option><option>Reportes para dirección</option><option>Marketing / contenido</option><option>Mission Control</option><option>No estoy seguro</option></select></div>
+          <div class="promo-code-field" id="promoCodeField"><label>Código de promoción</label><input name="codigo_promo" id="promoCodeInput" readonly placeholder="Se activa desde la promoción de lanzamiento"></div>
           <div><label>Contexto rápido</label><textarea name="mensaje" placeholder="Ej. Perdemos leads porque nadie da seguimiento después de la primera llamada..."></textarea></div>
           <button class="btn btn-primary" type="submit" style="width:100%;margin-top:12px">Enviar interés</button>
           <p class="form-note">Versión temporal: el botón abre un correo prellenado. Cambia el email de destino en <code>CONFIG.contactEmail</code> cuando conectes CRM/Formspree/HubSpot.</p>
@@ -491,6 +504,37 @@
       subjectPrefix: 'Interesado en agentes de AI'
     };
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const launchPromo = document.getElementById('launchPromo');
+    const promoCodeField = document.getElementById('promoCodeField');
+    const promoCodeInput = document.getElementById('promoCodeInput');
+
+    function createPromoCode(){
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let code = 'LARVUZ30-';
+      const values = new Uint32Array(6);
+      if (window.crypto && crypto.getRandomValues) crypto.getRandomValues(values);
+      for (let i = 0; i < 6; i++) {
+        const value = values[i] || Math.floor(Math.random() * chars.length);
+        code += chars[value % chars.length];
+      }
+      return code;
+    }
+
+    function activateLaunchPromo(){
+      const code = createPromoCode();
+      promoCodeInput.value = code;
+      promoCodeField.classList.add('is-active');
+      sessionStorage.setItem('larvuzPromoCode', code);
+    }
+
+    const savedPromoCode = sessionStorage.getItem('larvuzPromoCode');
+    if (savedPromoCode) {
+      promoCodeInput.value = savedPromoCode;
+      promoCodeField.classList.add('is-active');
+    }
+
+    launchPromo.addEventListener('click', activateLaunchPromo);
 
     const counters = document.querySelectorAll('.counter');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
