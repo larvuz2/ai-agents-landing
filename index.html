@@ -120,6 +120,7 @@
     .metric-number{position:relative;z-index:1;display:block;font-family:'Source Code Pro',monospace;font-size:clamp(34px,4.8vw,56px);line-height:.94;letter-spacing:-2px;color:var(--purple);font-weight:700;margin-bottom:8px}
     .metric-label{position:relative;z-index:1;color:var(--ink);font-size:19px;line-height:1.15;letter-spacing:-.25px}
     .metric-note{position:relative;z-index:1;margin-top:7px;color:var(--muted);font-size:14px}
+    .inevitable-section{background:linear-gradient(180deg,#fff,#f7f7f7);border-bottom:1px solid var(--line);padding:82px 0}.inevitable-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:30px;align-items:center}.fomo-copy h2{font-size:clamp(38px,5vw,64px);line-height:.96;letter-spacing:-1.9px;margin-bottom:16px}.fomo-copy p{font-size:20px;line-height:1.42;color:var(--muted);max-width:540px;margin:0}.fomo-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 11px;color:var(--label);font-size:14px;margin-bottom:16px;box-shadow:rgba(23,23,23,.04) 0 10px 24px -16px}.fomo-badge i{width:9px;height:9px;border-radius:50%;background:var(--ruby);box-shadow:0 0 0 4px rgba(255,106,61,.12)}.chart-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 18px 14px;box-shadow:rgba(0,0,0,.08) 0 0 0 1px, rgba(0,0,0,.04) 0 22px 44px -28px}.chart-head{display:flex;justify-content:space-between;gap:18px;align-items:start;margin-bottom:10px}.chart-head h3{font-size:20px;font-weight:500;letter-spacing:-.35px;margin:0}.chart-stat{font-family:'Source Code Pro',monospace;font-size:13px;color:var(--ruby);background:rgba(255,106,61,.10);border:1px solid rgba(255,106,61,.22);border-radius:999px;padding:6px 9px;white-space:nowrap}.ai-chart{width:100%;height:auto;display:block;overflow:visible}.axis-label,.chart-source{font-family:'Source Code Pro',monospace;font-size:11px;fill:var(--muted);color:var(--muted)}.tick-label{font-family:'Source Code Pro',monospace;font-size:11px;fill:var(--muted)}.chart-grid{stroke:#e7e7e7;stroke-dasharray:4 5}.growth-area{fill:url(#growthGradient)}.growth-line{fill:none;stroke:#090909;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.growth-dot{fill:#090909;stroke:#fff;stroke-width:3}.growth-dot.hot{fill:var(--ruby)}.chart-callout{font-family:'Source Code Pro',monospace;font-size:13px;fill:#090909;font-weight:700}.chart-source{display:block;margin-top:8px}
 
     section{padding:82px 0}.section-head{max-width:720px;margin-bottom:34px}
     .kicker{color:var(--purple);font-size:14px;font-weight:500;letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px}
@@ -147,7 +148,7 @@
     .final{padding:76px 0;background:#070707;color:#fff}.final h2{color:#fff;max-width:760px}.final p{color:rgba(255,255,255,.72);font-size:20px;line-height:1.4;max-width:680px}.footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     @media (max-width: 900px){
-      .nav-links,.actions{display:none}.mobile-menu{display:block}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid{grid-template-columns:1fr}.grid-3,.grid-2,.validation-grid,.highlight-cards{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
+      .nav-links,.actions{display:none}.mobile-menu{display:block}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid,.inevitable-grid{grid-template-columns:1fr}.grid-3,.grid-2,.validation-grid,.highlight-cards{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
     }
     @media (max-width: 520px){.hero-ctas .btn{width:100%}.microproof{display:block}.microproof span{margin:8px 0}h2{letter-spacing:-.8px}.card,.dark-card,.lead-form{padding:20px}.footer .wrap{display:block}}
     @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important}}
@@ -219,6 +220,50 @@
           <div class="metric-label">Reuniones aseguradas</div>
           <div class="metric-note">desde procesos de captura y seguimiento</div>
         </article>
+      </div>
+    </section>
+
+    <section class="inevitable-section" id="tendencia">
+      <div class="wrap inevitable-grid">
+        <div class="fomo-copy">
+          <div class="fomo-badge"><i></i> Señal de mercado</div>
+          <h2>El salto inevitable ya empezó.</h2>
+          <p>Las empresas que instalen agentes ahora van a operar más rápido antes de que el resto apenas empiece a ponerse al día.</p>
+        </div>
+        <aside class="chart-card" aria-label="Companies Investing in AI Agents">
+          <div class="chart-head">
+            <h3>Companies Investing in AI Agents</h3>
+            <span class="chart-stat">90% en 2029</span>
+          </div>
+          <svg class="ai-chart" viewBox="0 0 720 360" role="img" aria-labelledby="chartTitle chartDesc">
+            <title id="chartTitle">Companies Investing in AI Agents</title>
+            <desc id="chartDesc">Line chart showing companies investing in AI agents growing from 2 percent in 2024 to 90 percent in 2029.</desc>
+            <defs>
+              <linearGradient id="growthGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff6a3d" stop-opacity="0.28"/>
+                <stop offset="55%" stop-color="#e93cff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#090909" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <line class="chart-grid" x1="66" y1="40" x2="688" y2="40"/>
+            <line class="chart-grid" x1="66" y1="102.5" x2="688" y2="102.5"/>
+            <line class="chart-grid" x1="66" y1="165" x2="688" y2="165"/>
+            <line class="chart-grid" x1="66" y1="227.5" x2="688" y2="227.5"/>
+            <line class="chart-grid" x1="66" y1="290" x2="688" y2="290"/>
+            <text class="tick-label" x="42" y="44">100%</text>
+            <text class="tick-label" x="48" y="106.5">75%</text>
+            <text class="tick-label" x="48" y="169">50%</text>
+            <text class="tick-label" x="48" y="231.5">25%</text>
+            <text class="tick-label" x="54" y="294">0%</text>
+            <text class="axis-label" transform="translate(14 205) rotate(-90)">% of Companies</text>
+            <path class="growth-area" d="M90 285 L190 282 L290 275 L390 227.5 L505 152.5 L640 65 L640 290 L90 290 Z"/>
+            <path class="growth-line" d="M90 285 C130 284 150 283 190 282 C230 281 252 279 290 275 C330 270 356 248 390 227.5 C438 198 464 172 505 152.5 C560 126 602 88 640 65"/>
+            <circle class="growth-dot" cx="90" cy="285" r="6"/><circle class="growth-dot" cx="190" cy="282" r="6"/><circle class="growth-dot" cx="290" cy="275" r="6"/><circle class="growth-dot" cx="390" cy="227.5" r="6"/><circle class="growth-dot" cx="505" cy="152.5" r="6"/><circle class="growth-dot hot" cx="640" cy="65" r="7"/>
+            <text class="chart-callout" x="604" y="47">90%</text>
+            <text class="tick-label" x="78" y="326">2024</text><text class="tick-label" x="178" y="326">2025</text><text class="tick-label" x="278" y="326">2026</text><text class="tick-label" x="378" y="326">2027</text><text class="tick-label" x="493" y="326">2028</text><text class="tick-label" x="628" y="326">2029</text>
+          </svg>
+          <span class="chart-source">Fuente: Gartner</span>
+        </aside>
       </div>
     </section>
 
