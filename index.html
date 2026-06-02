@@ -110,6 +110,15 @@
     .screen-placeholder{height:250px;border:1px dashed #b9b9f9;border-radius:8px;margin-top:14px;background:linear-gradient(135deg,#f6f9fc,#fff);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:20px}
     .screen-placeholder b{display:block;color:var(--label);font-weight:400;margin-bottom:4px}
 
+    .validation-strip{position:relative;margin-top:-1px;padding:30px 0;background:#fff;border-bottom:1px solid var(--line)}
+    .validation-strip:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--purple-soft),transparent)}
+    .validation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .metric-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#fff,#f8fbff);padding:22px 24px;box-shadow:rgba(23,23,23,.05) 0 12px 30px -20px}
+    .metric-card:after{content:"";position:absolute;inset:auto -40px -70px auto;width:150px;height:150px;border-radius:50%;background:rgba(83,58,253,.08);filter:blur(4px)}
+    .metric-number{position:relative;z-index:1;display:block;font-family:'Source Code Pro',monospace;font-size:clamp(34px,4.8vw,56px);line-height:.94;letter-spacing:-2px;color:var(--purple);font-weight:700;margin-bottom:8px}
+    .metric-label{position:relative;z-index:1;color:var(--ink);font-size:19px;line-height:1.15;letter-spacing:-.25px}
+    .metric-note{position:relative;z-index:1;margin-top:7px;color:var(--muted);font-size:14px}
+
     section{padding:82px 0}.section-head{max-width:720px;margin-bottom:34px}
     .kicker{color:var(--purple);font-size:14px;font-weight:500;letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px}
     h2{font-size:clamp(34px,4.2vw,52px);line-height:1.02;letter-spacing:-1.3px;font-weight:300;margin:0 0 14px;text-wrap:balance}
@@ -133,7 +142,7 @@
     .final{padding:76px 0;background:#061b31;color:#fff}.final h2{color:#fff;max-width:760px}.final p{color:rgba(255,255,255,.72);font-size:20px;line-height:1.4;max-width:680px}.footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     @media (max-width: 900px){
-      .nav-links,.actions{display:none}.mobile-menu{display:block}.nav-inner{height:64px}.hero{padding-top:54px}.hero-grid,.mission-grid,.capture-grid,.audit-grid{grid-template-columns:1fr}.grid-3,.grid-2{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
+      .nav-links,.actions{display:none}.mobile-menu{display:block}.nav-inner{height:64px}.hero{padding-top:54px}.hero-grid,.mission-grid,.capture-grid,.audit-grid{grid-template-columns:1fr}.grid-3,.grid-2,.validation-grid{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
     }
     @media (max-width: 520px){.hero-ctas .btn{width:100%}.microproof{display:block}.microproof span{margin:8px 0}h2{letter-spacing:-.8px}.card,.dark-card,.lead-form{padding:20px}.footer .wrap{display:block}}
     @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important}}
@@ -187,6 +196,26 @@
         </aside>
       </div>
     </header>
+
+    <section class="validation-strip" aria-label="Validación de resultados">
+      <div class="wrap validation-grid">
+        <article class="metric-card">
+          <span class="metric-number"><span class="counter" data-target="100">0</span>+</span>
+          <div class="metric-label">Agentes desplegados</div>
+          <div class="metric-note">en flujos comerciales, operación y reportes</div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-number"><span class="counter" data-target="1000">0</span>+</span>
+          <div class="metric-label">Emails enviados</div>
+          <div class="metric-note">con seguimiento, propuestas y respuestas listas</div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-number"><span class="counter" data-target="50">0</span>+</span>
+          <div class="metric-label">Reuniones aseguradas</div>
+          <div class="metric-note">desde procesos de captura y seguimiento</div>
+        </article>
+      </div>
+    </section>
 
     <section class="audit-section" id="test">
       <div class="wrap audit-grid">
@@ -363,6 +392,41 @@
       subjectPrefix: 'Interesado en agentes de AI'
     };
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const counters = document.querySelectorAll('.counter');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const formatNumber = (value) => new Intl.NumberFormat('es-MX').format(value);
+
+    function animateCounter(counter){
+      const target = Number(counter.dataset.target || 0);
+      if (!target) return;
+      if (prefersReducedMotion) {
+        counter.textContent = formatNumber(target);
+        return;
+      }
+      const duration = 1200;
+      const start = performance.now();
+      function tick(now){
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        counter.textContent = formatNumber(Math.round(target * eased));
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.35 });
+      counters.forEach(counter => observer.observe(counter));
+    } else {
+      counters.forEach(animateCounter);
+    }
 
     document.getElementById('urlForm').addEventListener('submit', function(e){
       e.preventDefault();
