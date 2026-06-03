@@ -1,0 +1,19 @@
+# Netlify deployment config for agentesPRO.
+# Main site stays static. The config subdomain is routed by DNS to the VPS,
+# because Hermes Dashboard/TUI uses WebSockets and must sit behind Caddy.
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/config"
+  to = "https://config.agentespro.app/"
+  status = 302
+  force = true
