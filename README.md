@@ -1,6 +1,10 @@
-# Agentes de AI para Empresas — Landing
+# agentesPRO — Landing
 
-Landing page estática para vender instalación de agentes de AI en empresas.
+Landing page estática oficial de **agentesPRO** para vender instalación de agentes de AI en empresas.
+
+**Dominio principal:** https://agentespro.app  
+**Repo/proyecto local:** `/root/ai-agents-landing`  
+**Nombre anterior de trabajo:** Larvuz AI Ops / Agentes de AI para Empresas
 
 ## Qué incluye
 
