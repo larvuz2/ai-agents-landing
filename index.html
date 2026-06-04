@@ -142,6 +142,8 @@
     .platform-highlights{background:#fff;border-bottom:1px solid var(--line)}.highlight-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center}.highlight-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.highlight-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:rgba(0,0,0,.05) 0 0 0 1px, rgba(0,0,0,.04) 0 16px 28px -22px}.highlight-card h3{font-size:21px;font-weight:400;letter-spacing:-.35px;line-height:1.1;margin:0 0 8px}.highlight-card p{font-size:15px;line-height:1.42;color:var(--muted);margin:0}.dashboard-mini{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}.dash-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:12px}.dash-title{font-family:'Source Code Pro',monospace;font-size:12px;color:var(--muted)}.dash-status{font-size:12px;border-radius:999px;padding:4px 8px;background:rgba(34,197,94,.12);color:#15803d}.dash-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:10px;background:linear-gradient(180deg,#fff,#fafafa)}.dash-row strong{font-weight:400}.dash-row small{display:block;color:var(--muted);margin-top:2px}.dash-num{font-family:'Source Code Pro',monospace;color:var(--ink)}
     .comparison-section{background:linear-gradient(180deg,#fff,#f7f7f7);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .comparison-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;align-items:stretch}.comparison-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:rgba(0,0,0,.05) 0 0 0 1px, rgba(0,0,0,.04) 0 18px 38px -28px}.comparison-card.agent-card{box-shadow:var(--shadow);border-color:#dcdcdc}.comparison-label{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#f7f7f7;border-radius:999px;padding:6px 10px;color:var(--label);font-family:'Source Code Pro',monospace;font-size:12px;margin-bottom:18px}.comparison-label i{width:8px;height:8px;border-radius:50%;background:#a8a8a8}.agent-card .comparison-label i{background:var(--green);box-shadow:0 0 0 4px rgba(34,197,94,.12)}.comparison-card h3{font-size:clamp(27px,3vw,38px);line-height:1.02;letter-spacing:-1px;font-weight:300;margin:0 0 10px}.comparison-card p{font-size:18px;line-height:1.42;color:var(--muted);margin:0 0 18px}.comparison-visual{min-height:250px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,#fff,#fafafa);display:grid;place-items:center;margin:20px 0 18px;overflow:hidden}.comparison-visual svg{width:100%;height:auto;display:block}.comparison-list{display:grid;gap:9px;margin-top:10px}.comparison-item{display:flex;align-items:center;gap:9px;color:var(--label);font-size:15px}.comparison-item:before{content:"";width:7px;height:7px;border-radius:50%;background:#b8b8b8;flex:0 0 auto}.agent-card .comparison-item:before{background:var(--green)}.comparison-flow{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.flow-chip{font-family:'Source Code Pro',monospace;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#fff;color:var(--label)}.agent-card .flow-chip:nth-child(2){border-color:rgba(34,197,94,.32);background:rgba(34,197,94,.07)}.agent-card .flow-chip:nth-child(3){border-color:rgba(233,60,255,.28);background:rgba(233,60,255,.06)}.agent-card .flow-chip:nth-child(4){border-color:rgba(255,106,61,.32);background:rgba(255,106,61,.07)}
+
+    .agent-network{position:relative;width:min(100%,520px);height:280px;isolation:isolate}.agent-network:before{content:"";position:absolute;inset:40px 44px;border:1px solid var(--line);border-radius:24px;background:#fff;z-index:-2}.agent-network:after{content:"";position:absolute;left:50%;top:50%;width:64%;height:64%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(34,197,94,.11),transparent 46%),radial-gradient(circle at 72% 68%,rgba(233,60,255,.09),transparent 42%);z-index:-1}.agent-line-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.agent-line-svg path{fill:none;stroke:url(#lineAgentEmblem);stroke-width:3;stroke-linecap:round}.agent-emblem-node{position:absolute;left:50%;top:50%;width:94px;height:94px;transform:translate(-50%,-50%);border-radius:24px;display:grid;place-items:center;background:#070707;box-shadow:rgba(0,0,0,.20) 0 18px 44px -24px,0 0 0 6px rgba(255,255,255,.9)}.agent-emblem-node img{width:82px;height:82px;display:block}.agent-node{position:absolute;display:flex;align-items:center;gap:8px;border:1px solid #dedede;border-radius:14px;background:#fafafa;padding:9px 13px;color:var(--muted);font-family:'Source Code Pro',monospace;font-size:13px;box-shadow:rgba(0,0,0,.04) 0 10px 20px -18px}.agent-node i{width:8px;height:8px;border-radius:50%;background:#090909}.node-crm{left:78px;top:80px}.node-proposal{left:72px;bottom:72px}.node-email{right:58px;top:78px}.node-report{right:54px;bottom:70px}.node-team{left:50%;top:52px;transform:translateX(-50%)}.node-crm i,.node-team i{background:var(--green)}.node-proposal i{background:var(--magenta)}.node-report i{background:var(--ruby)}.emblem-kicker{display:inline-flex;align-items:center;gap:9px}.emblem-kicker img{width:28px;height:28px;border-radius:8px;box-shadow:rgba(0,0,0,.18) 0 8px 18px -12px}.final .final-emblem{width:62px;height:62px;border-radius:17px;margin-bottom:18px;box-shadow:rgba(255,255,255,.12) 0 0 0 1px,rgba(0,0,0,.36) 0 18px 36px -24px}.footer-brand{display:flex;align-items:center;gap:10px;color:var(--ink)}.footer-emblem{width:28px;height:28px;border-radius:8px;display:block;box-shadow:rgba(0,0,0,.12) 0 8px 18px -12px}
     .partner-statement{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:76px 0}.partner-statement h2{max-width:930px;margin:0 auto;text-align:center;font-size:clamp(38px,5.4vw,72px);line-height:.98;letter-spacing:-2.2px}.partner-statement p{max-width:720px;margin:18px auto 0;text-align:center;color:var(--muted);font-size:21px;line-height:1.38;font-weight:300}
     .workflow-section{background:linear-gradient(180deg,#fff,#f7f7f7);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.workflow-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.workflow-steps{display:grid;gap:12px}.workflow-step{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:rgba(0,0,0,.04) 0 10px 26px -20px}.step-num{font-family:'Source Code Pro',monospace;font-size:12px;color:#fff;background:#090909;border-radius:999px;padding:6px 8px}.workflow-step h3{font-size:20px;font-weight:400;margin:0 0 5px;letter-spacing:-.25px}.workflow-step p{margin:0;color:var(--muted);line-height:1.42}.tool-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.tool-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;color:var(--label);font-size:14px;box-shadow:rgba(0,0,0,.03) 0 8px 18px -14px}.tool-pill i{width:8px;height:8px;border-radius:50%;background:#090909}
 
@@ -320,21 +322,21 @@
             <span class="comparison-label"><i></i> AGENTE PRO</span>
             <h3>Decide el siguiente paso y ejecuta.</h3>
             <p>Trabaja con objetivos, memoria, herramientas conectadas y aprobación humana para empujar la operación.</p>
-            <div class="comparison-visual" aria-label="Agente Pro: sistema conectado que ejecuta trabajo real">
-              <svg viewBox="0 0 520 280" role="img">
-                <defs>
-                  <linearGradient id="lineAgent" x1="110" y1="70" x2="430" y2="220" gradientUnits="userSpaceOnUse"><stop stop-color="#090909"/><stop offset=".45" stop-color="#22c55e"/><stop offset=".75" stop-color="#e93cff"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient>
-                </defs>
-                <rect x="44" y="40" width="432" height="200" rx="24" fill="#fff" stroke="#e7e7e7"/>
-                <circle cx="260" cy="140" r="42" fill="#090909"/>
-                <text x="245" y="148" fill="#fff" font-family="Source Code Pro, monospace" font-size="17" font-weight="700">AI</text>
-                <path d="M260 140C206 108 174 96 122 100M260 140C204 160 172 188 118 190M260 140C314 103 352 91 414 96M260 140C320 158 356 190 418 194M260 140C260 109 260 88 260 72" stroke="url(#lineAgent)" stroke-width="3" fill="none" stroke-linecap="round"/>
-                <rect x="78" y="80" width="106" height="36" rx="14" fill="#fafafa" stroke="#dedede"/><circle cx="96" cy="98" r="5" fill="#22c55e"/><text x="112" y="103" fill="#6f747c" font-family="Source Code Pro, monospace" font-size="13">CRM</text>
-                <rect x="72" y="172" width="128" height="36" rx="14" fill="#fafafa" stroke="#dedede"/><circle cx="90" cy="190" r="5" fill="#e93cff"/><text x="106" y="195" fill="#6f747c" font-family="Source Code Pro, monospace" font-size="13">Propuesta</text>
-                <rect x="367" y="78" width="94" height="36" rx="14" fill="#fafafa" stroke="#dedede"/><circle cx="385" cy="96" r="5" fill="#090909"/><text x="401" y="101" fill="#6f747c" font-family="Source Code Pro, monospace" font-size="13">Email</text>
-                <rect x="358" y="176" width="108" height="36" rx="14" fill="#fafafa" stroke="#dedede"/><circle cx="376" cy="194" r="5" fill="#ff6a3d"/><text x="392" y="199" fill="#6f747c" font-family="Source Code Pro, monospace" font-size="13">Reporte</text>
-                <rect x="211" y="52" width="98" height="34" rx="13" fill="#fafafa" stroke="#dedede"/><circle cx="228" cy="69" r="5" fill="#22c55e"/><text x="244" y="74" fill="#6f747c" font-family="Source Code Pro, monospace" font-size="13">Equipo</text>
-              </svg>
+            <div class="comparison-visual" aria-label="Agente Pro: herramientas conectadas al emblema agentesPRO">
+              <div class="agent-network" role="img" aria-label="Equipo, CRM, Email, Reporte y Propuesta conectan al emblema agentesPRO">
+                <svg class="agent-line-svg" viewBox="0 0 520 280" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="lineAgentEmblem" x1="110" y1="70" x2="430" y2="220" gradientUnits="userSpaceOnUse"><stop stop-color="#090909"/><stop offset=".45" stop-color="#22c55e"/><stop offset=".75" stop-color="#e93cff"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient>
+                  </defs>
+                  <path d="M260 140C206 108 174 96 122 100M260 140C204 160 172 188 118 190M260 140C314 103 352 91 414 96M260 140C320 158 356 190 418 194M260 140C260 109 260 88 260 72"/>
+                </svg>
+                <div class="agent-emblem-node"><img src="assets/agentespro-emblem.png" alt="agentesPRO emblem" width="512" height="512"></div>
+                <span class="agent-node node-crm"><i></i>CRM</span>
+                <span class="agent-node node-proposal"><i></i>Propuesta</span>
+                <span class="agent-node node-email"><i></i>Email</span>
+                <span class="agent-node node-report"><i></i>Reporte</span>
+                <span class="agent-node node-team"><i></i>Equipo</span>
+              </div>
             </div>
             <div class="comparison-flow"><span class="flow-chip">Objetivo</span><span class="flow-chip">Decisión</span><span class="flow-chip">Acción</span><span class="flow-chip">Aprendizaje</span></div>
             <div class="comparison-list">
@@ -350,7 +352,7 @@
     <section class="platform-highlights" id="plataforma">
       <div class="wrap highlight-grid">
         <div>
-          <div class="kicker">Plataforma completa</div>
+          <div class="kicker emblem-kicker"><img src="assets/agentespro-emblem.png" alt="" width="512" height="512"> Plataforma completa</div>
           <h2>Agentes que no solo contestan. Ejecutan, reportan y escalan.</h2>
           <p class="lead" style="font-size:20px">Inspirado en los mejores productos de AI support: una capa simple para entrenar agentes, conectarlos a tus herramientas y medir qué está pasando en la operación.</p>
           <div class="highlight-cards">
@@ -601,6 +603,7 @@
 
     <section class="final">
       <div class="wrap">
+        <img class="final-emblem" src="assets/agentespro-emblem.png" alt="agentesPRO emblem" width="512" height="512">
         <h2>Si tu equipo sigue haciendo manualmente lo que un agente puede resolver, estás perdiendo tiempo todos los días.</h2>
         <p>Empieza con un proceso. Un agente. Un resultado claro. Después escalamos a una operación asistida por AI.</p>
         <div class="hero-ctas"><a class="btn btn-dark" href="#contacto">Quiero una llamada</a><a class="btn btn-ghost" href="#test" style="color:#fff;border-color:rgba(255,255,255,.26);background:rgba(255,255,255,.06)">Probar mi página</a></div>
@@ -608,7 +611,7 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> agentesPRO</span><span>AI práctica para procesos reales.</span></div></footer>
+  <footer class="footer"><div class="wrap"><span class="footer-brand"><img class="footer-emblem" src="assets/agentespro-emblem.png" alt="agentesPRO emblem" width="512" height="512"> © <span id="year"></span> agentesPRO</span><span>AI práctica para procesos reales.</span></div></footer>
 
   <script>
     const CONFIG = {
