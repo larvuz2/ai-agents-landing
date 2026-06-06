@@ -143,6 +143,19 @@
     .comparison-section{background:linear-gradient(180deg,#fff,#f7f7f7);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .comparison-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;align-items:stretch}.comparison-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:rgba(0,0,0,.05) 0 0 0 1px, rgba(0,0,0,.04) 0 18px 38px -28px}.comparison-card.agent-card{box-shadow:var(--shadow);border-color:#dcdcdc}.comparison-label{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#f7f7f7;border-radius:999px;padding:6px 10px;color:var(--label);font-family:'Source Code Pro',monospace;font-size:12px;margin-bottom:18px}.comparison-label i{width:8px;height:8px;border-radius:50%;background:#a8a8a8}.agent-card .comparison-label i{background:var(--green);box-shadow:0 0 0 4px rgba(34,197,94,.12)}.comparison-card h3{font-size:clamp(27px,3vw,38px);line-height:1.02;letter-spacing:-1px;font-weight:300;margin:0 0 10px}.comparison-card p{font-size:18px;line-height:1.42;color:var(--muted);margin:0 0 18px}.comparison-visual{min-height:250px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,#fff,#fafafa);display:grid;place-items:center;margin:20px 0 18px;overflow:hidden}.comparison-visual svg{width:100%;height:auto;display:block}.comparison-list{display:grid;gap:9px;margin-top:10px}.comparison-item{display:flex;align-items:center;gap:9px;color:var(--label);font-size:15px}.comparison-item:before{content:"";width:7px;height:7px;border-radius:50%;background:#b8b8b8;flex:0 0 auto}.agent-card .comparison-item:before{background:var(--green)}.comparison-flow{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.flow-chip{font-family:'Source Code Pro',monospace;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#fff;color:var(--label)}.agent-card .flow-chip:nth-child(2){border-color:rgba(34,197,94,.32);background:rgba(34,197,94,.07)}.agent-card .flow-chip:nth-child(3){border-color:rgba(233,60,255,.28);background:rgba(233,60,255,.06)}.agent-card .flow-chip:nth-child(4){border-color:rgba(255,106,61,.32);background:rgba(255,106,61,.07)}
 
+
+
+    .simulator-section{position:relative;overflow:hidden;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .simulator-section:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 20%,rgba(255,106,61,.10),transparent 28%),radial-gradient(circle at 88% 72%,rgba(34,197,94,.10),transparent 30%);pointer-events:none}.simulator-section .wrap{position:relative;z-index:1}
+    .simulator-head{display:grid;grid-template-columns:.82fr 1.18fr;gap:28px;align-items:end;margin-bottom:26px}.simulator-head .lead{margin:0;font-size:20px}
+    .simulator-shell{background:linear-gradient(180deg,#fff,#fafafa);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+    .sim-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:16px}.sim-tab{border:1px solid var(--line);background:#fff;color:var(--label);border-radius:999px;padding:9px 12px;cursor:pointer;transition:.18s ease;font-size:14px}.sim-tab:hover{transform:translateY(-1px);border-color:#cfcfcf}.sim-tab.is-active{background:#090909;color:#fff;border-color:#090909;box-shadow:rgba(0,0,0,.18) 0 14px 28px -20px}
+    .sim-output{display:grid;grid-template-columns:1fr 1fr;gap:16px}.sim-panel{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;min-height:520px}.sim-panel.after{border-color:#dcdcdc;box-shadow:rgba(0,0,0,.05) 0 0 0 1px, rgba(0,0,0,.04) 0 18px 38px -28px}.sim-panel:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(7,7,7,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(7,7,7,.035) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(180deg,#000,transparent 70%);pointer-events:none}.sim-panel>*{position:relative;z-index:1}
+    .sim-panel-label{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.sim-panel-label span{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#f7f7f7;border-radius:999px;padding:6px 10px;color:var(--label);font-family:'Source Code Pro',monospace;font-size:12px}.sim-panel-label i{width:8px;height:8px;border-radius:50%;background:#b8b8b8}.after .sim-panel-label i{background:var(--green);box-shadow:0 0 0 4px rgba(34,197,94,.12)}.sim-panel-label small{font-family:'Source Code Pro',monospace;color:var(--muted);font-size:12px}
+    .sim-panel h3{font-size:clamp(26px,3vw,38px);line-height:1.02;letter-spacing:-1px;font-weight:300;margin:0 0 8px}.sim-panel p{font-size:17px;line-height:1.4;color:var(--muted);margin:0 0 16px}.sim-flow{display:grid;gap:10px;margin:18px 0}.sim-step{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.86);padding:12px;transition:.22s ease}.sim-step b{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:#f1f1f1;color:#777;font-family:'Source Code Pro',monospace;font-size:12px}.after .sim-step b{background:#090909;color:#fff}.sim-step strong{display:block;font-weight:400;color:var(--ink);line-height:1.15}.sim-step em{display:block;font-style:normal;color:var(--muted);font-size:14px;margin-top:2px}.after .sim-step:nth-child(2){border-color:rgba(34,197,94,.32);background:rgba(34,197,94,.055)}.after .sim-step:nth-child(4){border-color:rgba(255,106,61,.28);background:rgba(255,106,61,.055)}
+    .sim-metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:14px}.sim-metric{border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px}.sim-metric strong{display:block;font-family:'Source Code Pro',monospace;font-size:18px;letter-spacing:-.7px}.sim-metric span{display:block;color:var(--muted);font-size:13px;line-height:1.2}.after .sim-metric strong{color:#108c3d}.before .sim-metric strong{color:#9b2c16}
+    .sim-cta{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;border:1px solid #dedede;background:#090909;color:#fff;border-radius:16px;padding:16px 18px}.sim-cta p{margin:0;color:rgba(255,255,255,.72);line-height:1.32}.sim-cta strong{display:block;color:#fff;font-weight:400;font-size:20px;letter-spacing:-.35px}.sim-cta .btn{background:#fff;color:#090909;border-color:#fff}.sim-note{margin-top:12px;color:var(--muted);font-size:13px;text-align:right}
+
     .agent-network{position:relative;width:min(100%,520px);height:280px;isolation:isolate}.agent-network:before{content:"";position:absolute;inset:40px 44px;border:1px solid var(--line);border-radius:24px;background:#fff;z-index:-2}.agent-network:after{content:"";position:absolute;left:50%;top:50%;width:64%;height:64%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(34,197,94,.11),transparent 46%),radial-gradient(circle at 72% 68%,rgba(233,60,255,.09),transparent 42%);z-index:-1}.agent-line-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.agent-line-svg path{fill:none;stroke:url(#lineAgentEmblem);stroke-width:3;stroke-linecap:round}.agent-emblem-node{position:absolute;left:50%;top:50%;width:94px;height:94px;transform:translate(-50%,-50%);border-radius:24px;display:grid;place-items:center;background:#070707;box-shadow:rgba(0,0,0,.20) 0 18px 44px -24px,0 0 0 6px rgba(255,255,255,.9)}.agent-emblem-node img{width:82px;height:82px;display:block}.agent-node{position:absolute;display:flex;align-items:center;gap:8px;border:1px solid #dedede;border-radius:14px;background:#fafafa;padding:9px 13px;color:var(--muted);font-family:'Source Code Pro',monospace;font-size:13px;box-shadow:rgba(0,0,0,.04) 0 10px 20px -18px}.agent-node i{width:8px;height:8px;border-radius:50%;background:#090909}.node-crm{left:78px;top:80px}.node-proposal{left:72px;bottom:72px}.node-email{right:58px;top:78px}.node-report{right:54px;bottom:70px}.node-team{left:50%;top:52px;transform:translateX(-50%)}.node-crm i,.node-team i{background:var(--green)}.node-proposal i{background:var(--magenta)}.node-report i{background:var(--ruby)}.emblem-kicker{display:inline-flex;align-items:center;gap:9px}.emblem-kicker img{width:28px;height:28px;border-radius:8px;box-shadow:rgba(0,0,0,.18) 0 8px 18px -12px}.final .final-emblem{width:62px;height:62px;border-radius:17px;margin-bottom:18px;box-shadow:rgba(255,255,255,.12) 0 0 0 1px,rgba(0,0,0,.36) 0 18px 36px -24px}.footer-brand{display:flex;align-items:center;gap:10px;color:var(--ink)}.footer-emblem{width:28px;height:28px;border-radius:8px;display:block;box-shadow:rgba(0,0,0,.12) 0 8px 18px -12px}
 
 
@@ -166,10 +179,10 @@
     .final{padding:76px 0;background:#070707;color:#fff}.final h2{color:#fff;max-width:760px}.final p{color:rgba(255,255,255,.72);font-size:20px;line-height:1.4;max-width:680px}.footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     @media (max-width: 900px){
-      body{padding-top:80px}.promo-inner{min-height:74px;gap:7px;flex-wrap:wrap;padding:7px 0;font-size:13px}.promo-copy{flex-wrap:wrap;justify-content:center;row-gap:3px}.promo-pill{font-size:11px;padding:4px 8px}.nav-links,.actions{display:none}.mobile-menu{display:block}.nav{top:80px}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid,.inevitable-grid,.comparison-grid,.living-copy,.living-grid,.modules-head,.module-grid{grid-template-columns:1fr}.modules-cta{display:block}.modules-cta .btn{width:100%;margin-top:14px}.grid-3,.grid-2,.validation-grid,.highlight-cards,.living-points{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
+      body{padding-top:80px}.promo-inner{min-height:74px;gap:7px;flex-wrap:wrap;padding:7px 0;font-size:13px}.promo-copy{flex-wrap:wrap;justify-content:center;row-gap:3px}.promo-pill{font-size:11px;padding:4px 8px}.nav-links,.actions{display:none}.mobile-menu{display:block}.nav{top:80px}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid,.inevitable-grid,.comparison-grid,.simulator-head,.sim-output,.living-copy,.living-grid,.modules-head,.module-grid{grid-template-columns:1fr}.modules-cta,.sim-cta{display:block}.modules-cta .btn,.sim-cta .btn{width:100%;margin-top:14px}.grid-3,.grid-2,.validation-grid,.highlight-cards,.living-points{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
     }
     @media (max-width: 620px){.living-card{min-height:auto;padding:14px}.workforce-canvas{height:520px}.wf-node{min-width:104px;padding:9px 10px}.wf-node strong{font-size:13px}.wf-ceo{top:6px}.wf-cos{top:86px}.wf-cto{left:4%;top:176px}.wf-cmo{right:4%;top:176px}.wf-dev{left:0;bottom:184px}.wf-qa{left:34%;bottom:136px}.wf-devops{left:auto;right:0;bottom:184px}.wf-content{left:0;right:auto;bottom:62px}.wf-sop{left:34%;right:auto;bottom:18px}.wf-growth{right:0;bottom:62px}.wf-mini-log{grid-template-columns:repeat(2,1fr)}.kanban-board{grid-template-columns:1fr;height:auto;overflow:visible}.task-card.route-card{animation:cardBreathe 4s ease-in-out infinite}.agent-lanes{position:relative;left:auto;right:auto;bottom:auto;margin-top:12px}.living-points{grid-template-columns:1fr}}
-    @media (max-width: 520px){.brand-logo{width:170px}.hero-ctas .btn{width:100%}.microproof{display:block}.microproof span{margin:8px 0}h2{letter-spacing:-.8px}.card,.dark-card,.lead-form{padding:20px}.footer .wrap{display:block}}
+    @media (max-width: 520px){.sim-metric-row{grid-template-columns:1fr}.sim-panel{min-height:auto}.sim-tabs{display:grid}.sim-tab{text-align:left}.brand-logo{width:170px}.hero-ctas .btn{width:100%}.microproof{display:block}.microproof span{margin:8px 0}h2{letter-spacing:-.8px}.card,.dark-card,.lead-form{padding:20px}.footer .wrap{display:block}}
     @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.wf-line-hot{stroke-dasharray:none;opacity:.75}}
   </style>
 </head>
@@ -184,7 +197,7 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="agentesPRO inicio"><img class="brand-logo" src="assets/agentespro-logo-new.png" alt="agentesPRO" width="1000" height="250"></a>
       <div class="nav-links">
-        <a href="#plataforma">Plataforma</a><a href="#comparativa">Comparativa</a><a href="#sistema-vivo">Sistema vivo</a><a href="#agentes">Agentes</a><a href="#mission-control">Mission Control</a><a href="#flujo">Flujo</a><a href="#casos">Casos</a><a href="/blog">Blog</a><a href="#contacto">Contacto</a>
+        <a href="#plataforma">Plataforma</a><a href="#comparativa">Comparativa</a><a href="#simulador">Simulador</a><a href="#sistema-vivo">Sistema vivo</a><a href="#agentes">Agentes</a><a href="#mission-control">Mission Control</a><a href="#flujo">Flujo</a><a href="#casos">Casos</a><a href="/blog">Blog</a><a href="#contacto">Contacto</a>
       </div>
       <div class="actions"><a class="btn btn-ghost" href="#test">Test de página</a><a class="btn btn-primary" href="#contacto">Agendar llamada</a></div>
       <a class="mobile-menu" href="/blog">Blog</a>
@@ -351,6 +364,49 @@
               <span class="comparison-item">Mejora con contexto real</span>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="simulator-section" id="simulador">
+      <div class="wrap">
+        <div class="simulator-head">
+          <div>
+            <div class="kicker">Simulador antes / después</div>
+            <h2>Elige un proceso y ve qué cambia cuando entra un Agente Pro.</h2>
+          </div>
+          <p class="lead">No vendemos “AI” abstracta. Instalamos una capa operativa que toma un flujo lento —propuestas, seguimiento, reportes o SOPs— y lo convierte en trabajo claro, revisable y medible.</p>
+        </div>
+        <div class="simulator-shell" data-simulator>
+          <div class="sim-tabs" role="tablist" aria-label="Procesos para simular">
+            <button class="sim-tab is-active" type="button" role="tab" aria-selected="true" data-sim="propuesta">Propuesta / cotización</button>
+            <button class="sim-tab" type="button" role="tab" aria-selected="false" data-sim="seguimiento">Seguimiento comercial</button>
+            <button class="sim-tab" type="button" role="tab" aria-selected="false" data-sim="reporte">Reporte semanal</button>
+            <button class="sim-tab" type="button" role="tab" aria-selected="false" data-sim="sop">Búsqueda interna / SOP</button>
+          </div>
+          <div class="sim-output" aria-live="polite">
+            <article class="sim-panel before">
+              <div class="sim-panel-label"><span><i></i> HOY / MANUAL</span><small id="simBeforeTag">fuga de tiempo</small></div>
+              <h3 id="simBeforeTitle">La oportunidad entra, pero el proceso se rompe.</h3>
+              <p id="simBeforeCopy">El equipo salta entre WhatsApp, correos, Drive y memoria humana. La propuesta tarda, falta contexto y el seguimiento llega tarde.</p>
+              <div class="sim-flow" id="simBeforeSteps"></div>
+              <div class="sim-metric-row" id="simBeforeMetrics"></div>
+            </article>
+            <article class="sim-panel after">
+              <div class="sim-panel-label"><span><i></i> CON AGENTESPRO</span><small id="simAfterTag">operación asistida</small></div>
+              <h3 id="simAfterTitle">El agente ordena, prepara y empuja la siguiente acción.</h3>
+              <p id="simAfterCopy">El sistema lee el contexto, arma un borrador, detecta huecos, pide aprobación humana y deja listo el seguimiento.</p>
+              <div class="sim-flow" id="simAfterSteps"></div>
+              <div class="sim-metric-row" id="simAfterMetrics"></div>
+            </article>
+          </div>
+          <div class="sim-cta">
+            <p><strong id="simRecommendation">Recomendación: instala primero un agente de propuestas + seguimiento.</strong><span id="simRecommendationCopy">Es el wedge más cercano a ventas y el más fácil de medir en pocas semanas.</span></p>
+            <a class="btn" href="#contacto">Quiero simular mi proceso</a>
+          </div>
+          <div class="sim-note">Interactivo: cambia el flujo arriba para ver distintos casos.</div>
         </div>
       </div>
     </section>
@@ -754,6 +810,67 @@
     } else {
       animateCountersOnce();
     }
+
+
+
+    const simulatorData = {
+      propuesta: {
+        beforeTag:'fuga de ventas', beforeTitle:'La oportunidad entra, pero la propuesta se atora.', beforeCopy:'El equipo junta contexto a mano, busca precios anteriores, pide datos que faltan y el lead se enfría mientras alguien arma el documento.',
+        beforeSteps:['Brief llega por WhatsApp o correo','Contexto repartido en mensajes y Drive','Cotización se arma desde cero','Nadie agenda seguimiento claro'], beforeMetrics:[['2–5 días','para responder'],['alto','riesgo de olvido'],['manual','cada versión']],
+        afterTag:'quote factory', afterTitle:'El agente convierte el brief en una propuesta revisable.', afterCopy:'Lee el contexto, detecta huecos, recupera ejemplos anteriores, arma el alcance y deja el follow-up listo para aprobar.',
+        afterSteps:['Intake ordenado con datos faltantes','Borrador de alcance + precio sugerido','Checklist de revisión humana','Seguimiento programado si no responden'], afterMetrics:[['<24h','primer borrador'],['claro','siguiente paso'],['medible','pipeline actualizado']],
+        rec:'Recomendación: instala primero un agente de propuestas + seguimiento.', recCopy:'Es el wedge más cercano a ventas y el más fácil de medir en pocas semanas.'
+      },
+      seguimiento: {
+        beforeTag:'leads fríos', beforeTitle:'Los prospectos se pierden después del primer contacto.', beforeCopy:'Alguien responde bien una vez, pero luego no hay sistema para recordar contexto, prioridad ni siguiente mensaje.',
+        beforeSteps:['Lead entra por varios canales','Primer contacto sin resumen central','La cuenta queda “pendiente”','El prospecto se enfría sin follow-up'], beforeMetrics:[['horas','buscando contexto'],['invisible','prioridad real'],['tarde','respuesta comercial']],
+        afterTag:'sales desk', afterTitle:'El agente mantiene viva cada oportunidad.', afterCopy:'Resume cada interacción, detecta cuentas calientes, sugiere el siguiente mensaje y deja tareas para aprobar antes de enviar.',
+        afterSteps:['Resumen automático del lead','Prioridad según intención y urgencia','Mensaje listo para aprobación','Recordatorio hasta cerrar o descartar'], afterMetrics:[['diario','lista de cuentas'],['rápido','respuesta lista'],['menos','oportunidades muertas']],
+        rec:'Recomendación: instala un agente de seguimiento comercial.', recCopy:'Convierte mensajes dispersos en una cola clara de oportunidades y acciones.'
+      },
+      reporte: {
+        beforeTag:'dirección ciega', beforeTitle:'El dueño persigue estatus en vez de ver la operación.', beforeCopy:'La información vive en chats, juntas y archivos. Cada reporte semanal requiere preguntarle a medio equipo qué pasó.',
+        beforeSteps:['Equipo actualiza en lugares distintos','Dirección pide estatus por chat','Se arma reporte manual','Bloqueos aparecen tarde'], beforeMetrics:[['viernes','cierre caótico'],['fragmentado','datos y pendientes'],['reactivo','decisiones tarde']],
+        afterTag:'executive brief', afterTitle:'El agente prepara un reporte ejecutivo sin perseguir al equipo.', afterCopy:'Agrupa tareas, clientes, pendientes, bloqueos y métricas clave para que dirección vea qué necesita atención.',
+        afterSteps:['Recolecta señales de operación','Resume avances y riesgos','Marca bloqueos críticos','Entrega briefing semanal accionable'], afterMetrics:[['1 vista','prioridades'],['antes','alertas de riesgo'],['menos','juntas de estatus']],
+        rec:'Recomendación: instala un CEO Copilot con reporte semanal.', recCopy:'Ideal para dueños que necesitan visibilidad sin microgestionar.'
+      },
+      sop: {
+        beforeTag:'conocimiento perdido', beforeTitle:'El equipo pregunta lo mismo porque la memoria está dispersa.', beforeCopy:'Procesos, reglas, archivos y ejemplos viven en la cabeza de algunos o en carpetas difíciles de navegar.',
+        beforeSteps:['Pregunta repetida en chat interno','Alguien busca el documento correcto','La respuesta depende de quién sabe','El proceso no se actualiza'], beforeMetrics:[['repetido','mismas dudas'],['lento','onboarding'],['frágil','memoria humana']],
+        afterTag:'second brain', afterTitle:'El agente encuentra respuestas y actualiza el conocimiento.', afterCopy:'Consulta documentos, SOPs y ejemplos internos; responde con fuentes y detecta cuándo falta documentar algo nuevo.',
+        afterSteps:['Pregunta entra al asistente interno','Respuesta con contexto y fuente','Escala dudas no documentadas','SOP se actualiza después de resolver'], afterMetrics:[['rápido','respuesta interna'],['fuente','menos confusión'],['vivo','conocimiento actualizado']],
+        rec:'Recomendación: empieza con Second Brain para tu operación.', recCopy:'Es el primer módulo si tu cuello de botella es conocimiento disperso y onboarding.'
+      }
+    };
+
+    function renderSimulator(key){
+      const data = simulatorData[key] || simulatorData.propuesta;
+      document.getElementById('simBeforeTag').textContent = data.beforeTag;
+      document.getElementById('simBeforeTitle').textContent = data.beforeTitle;
+      document.getElementById('simBeforeCopy').textContent = data.beforeCopy;
+      document.getElementById('simAfterTag').textContent = data.afterTag;
+      document.getElementById('simAfterTitle').textContent = data.afterTitle;
+      document.getElementById('simAfterCopy').textContent = data.afterCopy;
+      document.getElementById('simRecommendation').textContent = data.rec;
+      document.getElementById('simRecommendationCopy').textContent = data.recCopy;
+      const stepMarkup = (steps) => steps.map((step, i) => `<div class="sim-step"><b>${String(i + 1).padStart(2,'0')}</b><div><strong>${step}</strong><em>${i === steps.length - 1 ? 'resultado del flujo' : 'siguiente fricción'}</em></div></div>`).join('');
+      const metricMarkup = (metrics) => metrics.map(([big, label]) => `<div class="sim-metric"><strong>${big}</strong><span>${label}</span></div>`).join('');
+      document.getElementById('simBeforeSteps').innerHTML = stepMarkup(data.beforeSteps);
+      document.getElementById('simAfterSteps').innerHTML = stepMarkup(data.afterSteps);
+      document.getElementById('simBeforeMetrics').innerHTML = metricMarkup(data.beforeMetrics);
+      document.getElementById('simAfterMetrics').innerHTML = metricMarkup(data.afterMetrics);
+    }
+
+    document.querySelectorAll('.sim-tab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.sim-tab').forEach((item) => { item.classList.remove('is-active'); item.setAttribute('aria-selected','false'); });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected','true');
+        renderSimulator(tab.dataset.sim);
+      });
+    });
+    renderSimulator('propuesta');
 
     document.getElementById('urlForm').addEventListener('submit', function(e){
       e.preventDefault();
