@@ -17,3 +17,14 @@
   to = "https://config.agentespro.app/"
   status = 302
   force = true
+[[redirects]]
+  from = "/blog"
+  to = "/blog/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
+  status = 301
+  force = true
+
