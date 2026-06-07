@@ -58,16 +58,16 @@
       backdrop-filter:blur(18px);
       border-bottom:1px solid rgba(231,231,231,.86);
     }
-    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;color:var(--ink);line-height:1}
-    .brand-logo{display:block;width:210px;height:auto}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;color:var(--ink);line-height:1;flex:0 0 auto}
+    .brand-logo{display:block;width:184px;height:auto}
     .mark{width:28px;height:28px;border-radius:7px;background:#090909;box-shadow:inset 0 -3px 0 var(--magenta),inset 0 -6px 0 var(--ruby),rgba(0,0,0,.18) 0 12px 24px -12px}
-    .nav-links{display:flex;align-items:center;gap:22px;color:var(--label);font-size:15px}
-    .nav-links a{opacity:.84}.nav-links a:hover{opacity:1;color:var(--purple)}
-    .actions{display:flex;align-items:center;gap:10px}
+    .nav-links{display:flex;align-items:center;justify-content:center;gap:18px;color:var(--label);font-size:15px;flex:1 1 auto;min-width:0}
+    .nav-links a{opacity:.82}.nav-links a:hover{opacity:1;color:var(--purple)}
+    .actions{display:flex;align-items:center;gap:9px;flex:0 0 auto}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      min-height:44px;padding:11px 17px;border-radius:6px;border:1px solid transparent;
+      min-height:44px;padding:11px 15px;border-radius:6px;border:1px solid transparent;
       font-weight:400;line-height:1;cursor:pointer;transition:.18s ease;
       white-space:nowrap;
     }
@@ -197,7 +197,7 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="agentesPRO inicio"><img class="brand-logo" src="assets/agentespro-logo-new.png" alt="agentesPRO" width="1000" height="250"></a>
       <div class="nav-links">
-        <a href="#plataforma">Plataforma</a><a href="#comparativa">Comparativa</a><a href="#simulador">Simulador</a><a href="#sistema-vivo">Sistema vivo</a><a href="#agentes">Agentes</a><a href="#mission-control">Mission Control</a><a href="#flujo">Flujo</a><a href="#casos">Casos</a><a href="/blog">Blog</a><a href="#contacto">Contacto</a>
+        <a href="#plataforma">Plataforma</a><a href="#simulador">Simulador</a><a href="#mission-control">Mission Control</a><a href="#casos">Casos</a><a href="/blog">Blog</a>
       </div>
       <div class="actions"><a class="btn btn-ghost" href="#test">Test de página</a><a class="btn btn-primary" href="#contacto">Agendar llamada</a></div>
       <a class="mobile-menu" href="/blog">Blog</a>
