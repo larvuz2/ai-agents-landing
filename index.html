@@ -114,8 +114,14 @@
       width:100%;border:1px solid var(--line);border-radius:6px;padding:13px 13px;color:var(--ink);background:#fff;outline:none;transition:.18s ease;
     }
     .url-form input:focus,.lead-form input:focus,.lead-form textarea:focus,.lead-form select:focus{border-color:var(--purple);box-shadow:0 0 0 4px rgba(0,0,0,.10)}
-    .audit-result{margin-top:14px;display:none;border:1px dashed #dedede;border-radius:8px;padding:14px;background:#fff;color:var(--label)}
+    .audit-result{margin-top:14px;display:none;border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff;color:var(--label);box-shadow:var(--shadow)}
     .audit-result strong{color:var(--ink)}
+    .agent-audit-result{display:grid;gap:14px}
+    .audit-loading{display:flex;align-items:center;gap:10px;color:var(--ink);font-family:'Source Code Pro',monospace;font-size:13px}.audit-loading i{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(34,197,94,.35);animation:pulseDot 1.4s ease-out infinite}
+    .agent-result-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding-bottom:12px}.agent-result-top h4{margin:4px 0 6px;font-size:24px;letter-spacing:-.6px}.agent-result-top p{margin:0;color:var(--label);font-size:15px;line-height:1.35}.confidence-pill{white-space:nowrap;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-family:'Source Code Pro',monospace;font-size:12px;color:var(--ink);background:#f7f7f7}
+    .agent-reason{border-left:3px solid var(--green);padding:2px 0 2px 12px;color:var(--label);font-size:15px;line-height:1.4}.agent-reason b{display:block;color:var(--ink);font-weight:400;margin-bottom:2px}
+    .workflow-preview{display:grid;gap:8px}.workflow-step{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start}.workflow-step b{width:30px;height:30px;border-radius:8px;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:'Source Code Pro',monospace;font-size:12px;font-weight:400}.workflow-step span{padding-top:3px;color:var(--ink)}
+    .mini-mission-board{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#fff,#f8f8f8);padding:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.mini-mission-lane{border:1px solid #ececec;border-radius:10px;background:#fff;padding:9px;min-height:88px}.mini-mission-lane h5{margin:0 0 8px;font-family:'Source Code Pro',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:400}.mini-mission-card{border-radius:8px;background:#f7f7f7;padding:8px;color:var(--ink);font-size:12px;line-height:1.2}.mini-mission-card.hot{background:#090909;color:#fff}.mini-mission-card.review{background:#fff7ed;border:1px solid #fed7aa}.agent-audit-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.agent-audit-note{font-size:12px;color:var(--muted);font-family:'Source Code Pro',monospace}
     .screen-placeholder{height:250px;border:1px dashed #dedede;border-radius:8px;margin-top:14px;background:linear-gradient(135deg,#f7f7f7,#fff);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:20px}
     .screen-placeholder b{display:block;color:var(--label);font-weight:400;margin-bottom:4px}
 
@@ -179,7 +185,7 @@
     .final{padding:76px 0;background:#070707;color:#fff}.final h2{color:#fff;max-width:760px}.final p{color:rgba(255,255,255,.72);font-size:20px;line-height:1.4;max-width:680px}.footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     @media (max-width: 900px){
-      body{padding-top:80px}.promo-inner{min-height:74px;gap:7px;flex-wrap:wrap;padding:7px 0;font-size:13px}.promo-copy{flex-wrap:wrap;justify-content:center;row-gap:3px}.promo-pill{font-size:11px;padding:4px 8px}.nav-links,.actions{display:none}.mobile-menu{display:block}.nav{top:80px}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.mission-control-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid,.inevitable-grid,.comparison-grid,.simulator-head,.sim-output,.living-copy,.living-grid,.modules-head,.module-grid{grid-template-columns:1fr}.modules-cta,.sim-cta{display:block}.modules-cta .btn,.sim-cta .btn{width:100%;margin-top:14px}.grid-3,.grid-2,.validation-grid,.highlight-cards,.living-points{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}.mission-kanban{grid-template-columns:1fr;min-height:auto}.mission-control-preview{min-height:auto}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
+      body{padding-top:80px}.promo-inner{min-height:74px;gap:7px;flex-wrap:wrap;padding:7px 0;font-size:13px}.promo-copy{flex-wrap:wrap;justify-content:center;row-gap:3px}.promo-pill{font-size:11px;padding:4px 8px}.nav-links,.actions{display:none}.mobile-menu{display:block}.nav{top:80px}.nav-inner{height:64px}.hero{min-height:680px;padding-top:54px;background-position:64% center}.hero:before{width:100%;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78),rgba(255,255,255,.28))}.hero-grid,.mission-grid,.mission-control-grid,.capture-grid,.audit-grid,.highlight-grid,.workflow-grid,.inevitable-grid,.comparison-grid,.simulator-head,.sim-output,.living-copy,.living-grid,.modules-head,.module-grid{grid-template-columns:1fr}.modules-cta,.sim-cta{display:block}.modules-cta .btn,.sim-cta .btn{width:100%;margin-top:14px}.grid-3,.grid-2,.validation-grid,.highlight-cards,.living-points{grid-template-columns:1fr}.hero-visual{min-height:auto}.mini-flow{grid-template-columns:1fr}.arrow{display:none}.screen-placeholder{height:210px}.field-row{grid-template-columns:1fr}.step{padding-left:0}.step:before{position:static;margin-bottom:14px}.url-form{flex-direction:column}.url-form .btn{width:100%}.mini-mission-board{grid-template-columns:1fr}.agent-result-top{display:block}.confidence-pill{display:inline-flex;margin-top:10px}.mission-kanban{grid-template-columns:1fr;min-height:auto}.mission-control-preview{min-height:auto}section{padding:62px 0}h1{letter-spacing:-1.5px}.wrap{width:min(var(--max),calc(100% - 28px))}
     }
     @media (max-width: 620px){.living-card{min-height:auto;padding:14px}.workforce-canvas{height:520px}.wf-node{min-width:104px;padding:9px 10px}.wf-node strong{font-size:13px}.wf-ceo{top:6px}.wf-cos{top:86px}.wf-cto{left:4%;top:176px}.wf-cmo{right:4%;top:176px}.wf-dev{left:0;bottom:184px}.wf-qa{left:34%;bottom:136px}.wf-devops{left:auto;right:0;bottom:184px}.wf-content{left:0;right:auto;bottom:62px}.wf-sop{left:34%;right:auto;bottom:18px}.wf-growth{right:0;bottom:62px}.wf-mini-log{grid-template-columns:repeat(2,1fr)}.kanban-board{grid-template-columns:1fr;height:auto;overflow:visible}.task-card.route-card{animation:cardBreathe 4s ease-in-out infinite}.agent-lanes{position:relative;left:auto;right:auto;bottom:auto;margin-top:12px}.living-points{grid-template-columns:1fr}}
     @media (max-width: 520px){.sim-metric-row{grid-template-columns:1fr}.sim-panel{min-height:auto}.sim-tabs{display:grid}.sim-tab{text-align:left}.brand-logo{width:170px}.hero-ctas .btn{width:100%}.microproof{display:block}.microproof span{margin:8px 0}h2{letter-spacing:-.8px}.card,.dark-card,.lead-form{padding:20px}.footer .wrap{display:block}}
@@ -489,25 +495,25 @@
     <section class="audit-section" id="test">
       <div class="wrap audit-grid">
         <div>
-          <div class="kicker">Test de oportunidad</div>
-          <h2>Ingresa tu página. Te decimos dónde se está perdiendo conversión.</h2>
-          <p class="lead" style="font-size:20px">La mayoría de empresas no necesita “más AI”. Necesita capturar mejor, responder más rápido y no dejar morir oportunidades después del primer contacto.</p>
+          <div class="kicker">Website → primer agente</div>
+          <h2>Ingresa tu página. El agente empieza a armar tu primer flujo.</h2>
+          <p class="lead" style="font-size:20px">Escaneamos tu sitio, entendemos qué vendes y generamos una recomendación simple: el primer agente que debería mover ventas, propuestas o seguimiento.</p>
           <div class="audit-proof">
-            <div class="proof-chip"><strong>Qué revisamos</strong>CTA, claridad de oferta, captura de leads, seguimiento y propuesta comercial.</div>
-            <div class="proof-chip"><strong>Qué recibes</strong>Una recomendación concreta del primer agente que tendría más impacto.</div>
+            <div class="proof-chip"><strong>Qué revisa el agente</strong>Oferta, CTAs, captura de leads, señales de cotización, citas, seguimiento y fricción comercial.</div>
+            <div class="proof-chip"><strong>Qué recibes</strong>Un First Agent Recommendation con workflow y mini Mission Control listo para revisar.</div>
           </div>
         </div>
-        <aside class="hero-card" aria-label="Test de página web">
+        <aside class="hero-card" aria-label="Primer agente recomendado desde URL">
           <div class="browser-bar"><span class="traffic"></span><span class="traffic"></span><span class="traffic"></span></div>
           <div class="audit-box">
-            <h3>Ingresa tu página aquí</h3>
-            <p>Te mostramos dónde un agente puede ayudarte a capturar más leads, dar seguimiento y convertir mejor.</p>
+            <h3>Escanea tu empresa</h3>
+            <p>Pega tu URL. El agente lee señales públicas del sitio y construye una primera recomendación operativa.</p>
             <form class="url-form" id="urlForm">
               <input id="websiteInput" type="url" placeholder="https://tuempresa.com" required>
-              <button class="btn btn-primary" type="submit">Hacer test</button>
+              <button class="btn btn-primary" type="submit">Construir mi primer agente</button>
             </form>
-            <div class="audit-result" id="auditResult"></div>
-            <div class="screen-placeholder"><div class="service-graphic"><svg viewBox="0 0 300 160" aria-hidden="true"><rect x="24" y="24" width="252" height="112" rx="18" fill="#fff" stroke="#e7e7e7"/><rect x="48" y="48" width="94" height="9" rx="4.5" fill="#090909"/><rect x="48" y="70" width="170" height="7" rx="3.5" fill="#dedede"/><rect x="48" y="88" width="132" height="7" rx="3.5" fill="#ededed"/><circle cx="226" cy="77" r="18" fill="#f7f7f7" stroke="#dedede"/><path d="M217 77l7 7 14-18" stroke="#22c55e" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="48" y="112" width="84" height="14" rx="7" fill="#090909"/></svg></div></div>
+            <div class="audit-result" id="auditResult" aria-live="polite"></div>
+            <div class="screen-placeholder" id="auditPlaceholder"><div class="service-graphic"><svg viewBox="0 0 300 160" aria-hidden="true"><rect x="24" y="24" width="252" height="112" rx="18" fill="#fff" stroke="#e7e7e7"/><rect x="48" y="48" width="94" height="9" rx="4.5" fill="#090909"/><rect x="48" y="70" width="170" height="7" rx="3.5" fill="#dedede"/><rect x="48" y="88" width="132" height="7" rx="3.5" fill="#ededed"/><circle cx="226" cy="77" r="18" fill="#f7f7f7" stroke="#dedede"/><path d="M217 77l7 7 14-18" stroke="#22c55e" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="48" y="112" width="84" height="14" rx="7" fill="#090909"/></svg></div></div>
           </div>
         </aside>
       </div>
@@ -895,20 +901,55 @@
     });
     renderSimulator('propuesta');
 
-    document.getElementById('urlForm').addEventListener('submit', function(e){
+    function escapeHtml(value){
+      return String(value || '').replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+    }
+
+    function localAuditFallback(url){
+      let host = url;
+      try { host = new URL(url).hostname.replace('www.',''); } catch(err) {}
+      const lower = host.toLowerCase();
+      let best = 'Proposal + Follow-up Agent';
+      let why = 'Tu sitio tiene una oportunidad clara: convertir visitantes en leads con contexto, propuesta y seguimiento visible.';
+      let workflow = ['Leer la página y entender la oferta','Resumir el tipo de cliente ideal','Preparar propuesta o siguiente email','Crear seguimiento si no hay respuesta','Pedir aprobación humana antes de enviar'];
+      if (/shop|store|boutique|tienda|mx/.test(lower)) { best = 'Customer Recovery Agent'; why = 'El primer impacto está en recuperar intención de compra y responder dudas antes de que el visitante se vaya.'; workflow = ['Detectar intención de compra','Resumir producto o duda','Preparar respuesta personalizada','Crear seguimiento','Escalar a humano si hay precio o reclamo']; }
+      return {host, company_line: host, business: 'empresa con oportunidad comercial', best_agent: best, why, workflow, confidence: 68, mission: {queued:'Website scanned', running:`Building ${best} workflow`, review:'First agent recommendation ready', completed:'Implementation call unlocked'}};
+    }
+
+    function renderAgentAudit(audit, url, fetched){
+      const workflow = (audit.workflow || []).map((step, i) => `<div class="workflow-step"><b>${String(i + 1).padStart(2,'0')}</b><span>${escapeHtml(step)}</span></div>`).join('');
+      const mailBody = `Quiero construir este primer agente para mi empresa.\n\nURL: ${url}\nEmpresa detectada: ${audit.company_line || audit.host}\nPrimer agente: ${audit.best_agent}\n\nWorkflow sugerido:\n${(audit.workflow || []).map((s,i)=>`${i+1}. ${s}`).join('\n')}`;
+      return `<div class="agent-audit-result">
+        <div class="agent-result-top"><div><span class="mono-label">First Agent Recommendation</span><h4>${escapeHtml(audit.best_agent)}</h4><p>${escapeHtml(audit.company_line || audit.host)} · ${escapeHtml(audit.business || 'empresa analizada')}</p></div><span class="confidence-pill">${Math.round(audit.confidence || 70)}% señal</span></div>
+        <div class="agent-reason"><b>Por qué este agente</b>${escapeHtml(audit.why)}</div>
+        <div class="workflow-preview">${workflow}</div>
+        <div class="mini-mission-board" aria-label="Mini Mission Control generado">
+          <div class="mini-mission-lane"><h5>Queued</h5><div class="mini-mission-card">${escapeHtml(audit.mission?.queued || 'Website scanned')}</div></div>
+          <div class="mini-mission-lane"><h5>In progress</h5><div class="mini-mission-card hot">${escapeHtml(audit.mission?.running || 'Building workflow')}</div></div>
+          <div class="mini-mission-lane"><h5>Review</h5><div class="mini-mission-card review">${escapeHtml(audit.mission?.review || 'Recommendation ready')}</div></div>
+          <div class="mini-mission-lane"><h5>Done</h5><div class="mini-mission-card">${escapeHtml(audit.mission?.completed || 'Call unlocked')}</div></div>
+        </div>
+        <div class="agent-audit-actions"><a class="btn btn-primary" href="mailto:${CONFIG.contactEmail}?subject=${encodeURIComponent(CONFIG.subjectPrefix + ' — First Agent Recommendation')}&body=${encodeURIComponent(mailBody)}">Build this agent</a><span class="agent-audit-note">${fetched ? 'website crawled' : 'fallback scan'} · safe public signals only</span></div>
+      </div>`;
+    }
+
+    document.getElementById('urlForm').addEventListener('submit', async function(e){
       e.preventDefault();
       const url = document.getElementById('websiteInput').value.trim();
       const result = document.getElementById('auditResult');
-      let host = url;
-      try { host = new URL(url).hostname.replace('www.',''); } catch(err) {}
+      const placeholder = document.getElementById('auditPlaceholder');
       result.style.display = 'block';
-      result.innerHTML = `<strong>Mini diagnóstico para ${host}</strong><br><br>
-      Lo primero que revisaríamos:<br>
-      1. ¿La página captura leads con claridad?<br>
-      2. ¿Hay seguimiento automático después del primer contacto?<br>
-      3. ¿El equipo tiene contexto centralizado del cliente?<br>
-      4. ¿Existe un flujo para propuestas y cotizaciones?<br><br>
-      <a class="btn btn-primary" href="mailto:${CONFIG.contactEmail}?subject=${encodeURIComponent(CONFIG.subjectPrefix + ' — Test de página')}&body=${encodeURIComponent('Quiero revisar esta página: ' + url + '\n\nMe interesa detectar oportunidades para agentes de AI, seguimiento y conversión.')}" style="margin-top:4px">Recibir recomendación</a>`;
+      if (placeholder) placeholder.style.display = 'none';
+      result.innerHTML = '<div class="audit-loading"><i></i>Agent scanning website and building first workflow…</div>';
+      try {
+        const response = await fetch('/.netlify/functions/analyze-url', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({url})});
+        const payload = await response.json();
+        if (!payload.audit) throw new Error('No audit returned');
+        result.innerHTML = renderAgentAudit(payload.audit, url, payload.fetched);
+      } catch(err) {
+        const fallback = localAuditFallback(url);
+        result.innerHTML = renderAgentAudit(fallback, url, false);
+      }
     });
 
     document.getElementById('leadForm').addEventListener('submit', function(e){
